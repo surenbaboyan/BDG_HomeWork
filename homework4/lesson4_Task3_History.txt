@@ -1,0 +1,12 @@
+ 1218  sudo cp /etc/shadow /tmp
+ 1219  man passwd
+ 1220  passwd suren
+ 1221  passwd root
+ 1222  sudo passwd root
+ 1223  diff /etc/shadow /tmp/shadow
+ 1224  sudo diff /etc/shadow /tmp/shadow
+ 1225  history
+ 1226  history | tain -n 9 /home/suren/lesson4/lesson4_Task3_History.txt
+ 1227  history | tail -n 9 /home/suren/lesson4/lesson4_Task3_History.txt
+ 1228  history | tail -n 9 >/home/suren/lesson4/lesson4_Task3_History.txt
+ 1229  history | tail -n 12 >/home/suren/lesson4/lesson4_Task3_History.txt

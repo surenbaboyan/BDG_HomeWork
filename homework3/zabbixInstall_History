@@ -1,0 +1,25 @@
+ 1108  sudo apt update
+ 1109  cd
+ 1110  clear
+ 1111  sudo apt install libapache2-mod-php php php-mbstring php-gd php-xml php-bcmath php-ldap php-mysql
+ 1112  sudo nano /etc/php/7.4/apache2/php.ini
+ 1113  sudo apt install mysql-server
+ 1114  systemctl status mysql
+ 1115  wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+focal_all.deb
+ 1116  sudo dpkg -i zabbix-release_5.0-1+focal_all.deb
+ 1117  clear
+ 1118  sudo apt update
+ 1119  sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-agent zabbix-apache-conf
+ 1120  sudo mysql
+ 1121  clear
+ 1122  cd /usr/share/doc/zabbix-server-mysql
+ 1123  zcat create.sql.gz | mysql -u zabbix -p zabbixdb
+ 1124  sudo nano /etc/zabbix/zabbix_server.conf
+ 1125  sudo systemctl enable zabbix-server
+ 1126  sudo systemctl restart zabbix-server
+ 1127  sudo systemctl restart apache2
+ 1128  clear
+ 1129  history
+ 1130  history | head -n 25 /home/suren/Desktop/zabbixInstall_History
+ 1131  history | head -n 25 > /home/suren/Desktop/zabbixInstall_History
+ 1132  history | tail -n 25 > /home/suren/Desktop/zabbixInstall_History

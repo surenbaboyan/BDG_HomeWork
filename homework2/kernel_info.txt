@@ -1,0 +1,661 @@
+Oct 10 00:00:11 sBaboyan kernel: [67399.157258] audit: type=1400 audit(1633809611.579:59): apparmor="DENIED" operation="capable" profile="/usr/sbin/cups-browsed" pid=12303 comm="cups-browsed" capability=23  capname="sys_nice"
+Oct 10 12:28:27 sBaboyan kernel: [71135.390847] 08:28:27.506466 timesync vgsvcTimeSyncWorker: Radical host time change: 41 192 719 000 000ns (HostNow=1 633 854 507 506 000 000 ns HostLast=1 633 813 314 787 000 000 ns)
+Oct 10 12:28:37 sBaboyan kernel: [71145.387857] 08:28:37.508475 timesync vgsvcTimeSyncWorker: Radical guest time change: 41 169 609 444 000ns (GuestNow=1 633 854 517 508 457 000 ns GuestLast=1 633 813 347 899 013 000 ns fSetTimeLastLoop=true )
+Oct 10 12:40:44 sBaboyan kernel: [71869.935222] audit: type=1400 audit(1633855244.004:60): apparmor="DENIED" operation="open" profile="snap.snap-store.ubuntu-software" name="/var/lib/snapd/hostfs/usr/share/gdm/greeter/applications/gnome-initial-setup.desktop" pid=1846 comm="snap-store" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+Oct 10 12:40:44 sBaboyan kernel: [71870.056815] audit: type=1400 audit(1633855244.124:61): apparmor="DENIED" operation="open" profile="snap.snap-store.ubuntu-software" name="/var/lib/snapd/hostfs/usr/share/gdm/greeter/applications/gnome-initial-setup.desktop" pid=1846 comm="snap-store" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+Oct 10 12:40:46 sBaboyan kernel: [71872.398747] audit: type=1326 audit(1633855246.469:62): auid=1000 uid=1000 gid=1000 ses=2 subj=snap.snap-store.ubuntu-software pid=1846 comm="snap-store" exe="/snap/snap-store/547/usr/bin/snap-store" sig=0 arch=c000003e syscall=93 compat=0 ip=0x7f4ddc0ab4e7 code=0x50000
+Oct 10 13:05:09 sBaboyan kernel: [73335.675330] rfkill: input handler enabled
+Oct 10 13:05:10 sBaboyan systemd[1]: Stopping Tool to automatically collect and submit kernel crash signatures...
+Oct 10 13:05:29 sBaboyan systemd[1]: Started Save initial kernel messages after boot.
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] Linux version 5.11.0-37-generic (buildd@lcy01-amd64-021) (gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0, GNU ld (GNU Binutils for Ubuntu) 2.34) #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021 (Ubuntu 5.11.0-37.41~20.04.2-generic 5.11.22)
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.11.0-37-generic root=UUID=2b38f2b8-3942-410f-914f-cf29ec0dd9cc ro quiet splash
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] KERNEL supported cpus:
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000]   Intel GenuineIntel
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000]   AMD AuthenticAMD
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000]   Hygon HygonGenuine
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000]   Centaur CentaurHauls
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000]   zhaoxin   Shanghai  
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] BIOS-provided physical RAM map:
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffeffff] usable
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] BIOS-e820: [mem 0x000000007fff0000-0x000000007fffffff] ACPI data
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] NX (Execute Disable) protection: active
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] SMBIOS 2.5 present.
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] Hypervisor detected: KVM
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] kvm-clock: cpu 0, msr 61e01001, primary cpu clock
+Oct 10 13:05:29 sBaboyan kernel: [    0.000000] kvm-clock: using sched offset of 5905136076 cycles
+Oct 10 13:05:29 sBaboyan kernel: [    0.000005] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+Oct 10 13:05:29 sBaboyan kernel: [    0.000012] tsc: Detected 2594.116 MHz processor
+Oct 10 13:05:29 sBaboyan kernel: [    0.011514] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Oct 10 13:05:29 sBaboyan kernel: [    0.011527] e820: remove [mem 0x000a0000-0x000fffff] usable
+Oct 10 13:05:29 sBaboyan kernel: [    0.011542] last_pfn = 0x7fff0 max_arch_pfn = 0x400000000
+Oct 10 13:05:29 sBaboyan kernel: [    0.011563] MTRR default type: uncachable
+Oct 10 13:05:29 sBaboyan kernel: [    0.011568] MTRR variable ranges disabled:
+Oct 10 13:05:29 sBaboyan kernel: [    0.011575] Disabled
+Oct 10 13:05:29 sBaboyan kernel: [    0.011577] x86/PAT: MTRRs disabled, skipping PAT initialization too.
+Oct 10 13:05:29 sBaboyan kernel: [    0.011584] CPU MTRRs all blank - virtualized system.
+Oct 10 13:05:29 sBaboyan kernel: [    0.011590] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+Oct 10 13:05:29 sBaboyan kernel: [    0.011682] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.176601] check: Scanning 1 areas for low memory corruption
+Oct 10 13:05:29 sBaboyan kernel: [    0.177143] RAMDISK: [mem 0x31abf000-0x34d56fff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.177163] ACPI: Early table checksum verification disabled
+Oct 10 13:05:29 sBaboyan kernel: [    0.177169] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+Oct 10 13:05:29 sBaboyan kernel: [    0.177180] ACPI: XSDT 0x000000007FFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+Oct 10 13:05:29 sBaboyan kernel: [    0.177196] ACPI: FACP 0x000000007FFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+Oct 10 13:05:29 sBaboyan kernel: [    0.177213] ACPI: DSDT 0x000000007FFF0470 002325 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+Oct 10 13:05:29 sBaboyan kernel: [    0.177227] ACPI: FACS 0x000000007FFF0200 000040
+Oct 10 13:05:29 sBaboyan kernel: [    0.177238] ACPI: FACS 0x000000007FFF0200 000040
+Oct 10 13:05:29 sBaboyan kernel: [    0.177249] ACPI: APIC 0x000000007FFF0240 00005C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+Oct 10 13:05:29 sBaboyan kernel: [    0.177262] ACPI: SSDT 0x000000007FFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+Oct 10 13:05:29 sBaboyan kernel: [    0.177274] ACPI: Reserving FACP table memory at [mem 0x7fff00f0-0x7fff01e3]
+Oct 10 13:05:29 sBaboyan kernel: [    0.177279] ACPI: Reserving DSDT table memory at [mem 0x7fff0470-0x7fff2794]
+Oct 10 13:05:29 sBaboyan kernel: [    0.177283] ACPI: Reserving FACS table memory at [mem 0x7fff0200-0x7fff023f]
+Oct 10 13:05:29 sBaboyan kernel: [    0.177287] ACPI: Reserving FACS table memory at [mem 0x7fff0200-0x7fff023f]
+Oct 10 13:05:29 sBaboyan kernel: [    0.177291] ACPI: Reserving APIC table memory at [mem 0x7fff0240-0x7fff029b]
+Oct 10 13:05:29 sBaboyan kernel: [    0.177296] ACPI: Reserving SSDT table memory at [mem 0x7fff02a0-0x7fff046b]
+Oct 10 13:05:29 sBaboyan kernel: [    0.177324] ACPI: Local APIC address 0xfee00000
+Oct 10 13:05:29 sBaboyan kernel: [    0.178215] No NUMA configuration found
+Oct 10 13:05:29 sBaboyan kernel: [    0.178218] Faking a node at [mem 0x0000000000000000-0x000000007ffeffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.178255] NODE_DATA(0) allocated [mem 0x7ffc6000-0x7ffeffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.180203] Zone ranges:
+Oct 10 13:05:29 sBaboyan kernel: [    0.180206]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.180212]   DMA32    [mem 0x0000000001000000-0x000000007ffeffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.180218]   Normal   empty
+Oct 10 13:05:29 sBaboyan kernel: [    0.180222]   Device   empty
+Oct 10 13:05:29 sBaboyan kernel: [    0.180227] Movable zone start for each node
+Oct 10 13:05:29 sBaboyan kernel: [    0.180237] Early memory node ranges
+Oct 10 13:05:29 sBaboyan kernel: [    0.180240]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.180244]   node   0: [mem 0x0000000000100000-0x000000007ffeffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.180249] Initmem setup node 0 [mem 0x0000000000001000-0x000000007ffeffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.180255] On node 0 totalpages: 524174
+Oct 10 13:05:29 sBaboyan kernel: [    0.180258]   DMA zone: 64 pages used for memmap
+Oct 10 13:05:29 sBaboyan kernel: [    0.180262]   DMA zone: 21 pages reserved
+Oct 10 13:05:29 sBaboyan kernel: [    0.180265]   DMA zone: 3998 pages, LIFO batch:0
+Oct 10 13:05:29 sBaboyan kernel: [    0.180269]   DMA32 zone: 8128 pages used for memmap
+Oct 10 13:05:29 sBaboyan kernel: [    0.180273]   DMA32 zone: 520176 pages, LIFO batch:63
+Oct 10 13:05:29 sBaboyan kernel: [    0.180280] On node 0, zone DMA: 1 pages in unavailable ranges
+Oct 10 13:05:29 sBaboyan kernel: [    0.180357] On node 0, zone DMA: 97 pages in unavailable ranges
+Oct 10 13:05:29 sBaboyan kernel: [    0.189789] On node 0, zone DMA32: 16 pages in unavailable ranges
+Oct 10 13:05:29 sBaboyan kernel: [    0.190582] ACPI: PM-Timer IO Port: 0x4008
+Oct 10 13:05:29 sBaboyan kernel: [    0.190588] ACPI: Local APIC address 0xfee00000
+Oct 10 13:05:29 sBaboyan kernel: [    0.190733] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-23
+Oct 10 13:05:29 sBaboyan kernel: [    0.190742] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Oct 10 13:05:29 sBaboyan kernel: [    0.190747] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+Oct 10 13:05:29 sBaboyan kernel: [    0.190754] ACPI: IRQ0 used by override.
+Oct 10 13:05:29 sBaboyan kernel: [    0.190757] ACPI: IRQ9 used by override.
+Oct 10 13:05:29 sBaboyan kernel: [    0.190764] Using ACPI (MADT) for SMP configuration information
+Oct 10 13:05:29 sBaboyan kernel: [    0.190777] smpboot: Allowing 2 CPUs, 0 hotplug CPUs
+Oct 10 13:05:29 sBaboyan kernel: [    0.190819] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.190825] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.190829] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.190833] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.190838] [mem 0x80000000-0xfebfffff] available for PCI devices
+Oct 10 13:05:29 sBaboyan kernel: [    0.190842] Booting paravirtualized kernel on KVM
+Oct 10 13:05:29 sBaboyan kernel: [    0.190846] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+Oct 10 13:05:29 sBaboyan kernel: [    0.190862] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:2 nr_cpu_ids:2 nr_node_ids:1
+Oct 10 13:05:29 sBaboyan kernel: [    0.191001] percpu: Embedded 56 pages/cpu s192512 r8192 d28672 u1048576
+Oct 10 13:05:29 sBaboyan kernel: [    0.191016] pcpu-alloc: s192512 r8192 d28672 u1048576 alloc=1*2097152
+Oct 10 13:05:29 sBaboyan kernel: [    0.191024] pcpu-alloc: [0] 0 1 
+Oct 10 13:05:29 sBaboyan kernel: [    0.191089] kvm-guest: PV spinlocks enabled
+Oct 10 13:05:29 sBaboyan kernel: [    0.191095] PV qspinlock hash table entries: 256 (order: 0, 4096 bytes, linear)
+Oct 10 13:05:29 sBaboyan kernel: [    0.191109] Built 1 zonelists, mobility grouping on.  Total pages: 515961
+Oct 10 13:05:29 sBaboyan kernel: [    0.191113] Policy zone: DMA32
+Oct 10 13:05:29 sBaboyan kernel: [    0.191116] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.11.0-37-generic root=UUID=2b38f2b8-3942-410f-914f-cf29ec0dd9cc ro quiet splash
+Oct 10 13:05:29 sBaboyan kernel: [    0.191406] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Oct 10 13:05:29 sBaboyan kernel: [    0.191461] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+Oct 10 13:05:29 sBaboyan kernel: [    0.191566] mem auto-init: stack:off, heap alloc:on, heap free:off
+Oct 10 13:05:29 sBaboyan kernel: [    0.199030] Memory: 1973164K/2096696K available (14345K kernel code, 3478K rwdata, 5460K rodata, 2688K init, 5976K bss, 123272K reserved, 0K cma-reserved)
+Oct 10 13:05:29 sBaboyan kernel: [    0.199043] random: get_random_u64 called from __kmem_cache_create+0x2d/0x430 with crng_init=0
+Oct 10 13:05:29 sBaboyan kernel: [    0.199319] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+Oct 10 13:05:29 sBaboyan kernel: [    0.199349] Kernel/User page tables isolation: enabled
+Oct 10 13:05:29 sBaboyan kernel: [    0.199419] ftrace: allocating 48686 entries in 191 pages
+Oct 10 13:05:29 sBaboyan kernel: [    0.250314] ftrace: allocated 191 pages with 7 groups
+Oct 10 13:05:29 sBaboyan kernel: [    0.250468] rcu: Hierarchical RCU implementation.
+Oct 10 13:05:29 sBaboyan kernel: [    0.250471] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=2.
+Oct 10 13:05:29 sBaboyan kernel: [    0.250474] 	Rude variant of Tasks RCU enabled.
+Oct 10 13:05:29 sBaboyan kernel: [    0.250476] 	Tracing variant of Tasks RCU enabled.
+Oct 10 13:05:29 sBaboyan kernel: [    0.250479] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+Oct 10 13:05:29 sBaboyan kernel: [    0.250481] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+Oct 10 13:05:29 sBaboyan kernel: [    0.267019] NR_IRQS: 524544, nr_irqs: 440, preallocated irqs: 16
+Oct 10 13:05:29 sBaboyan kernel: [    0.268560] random: crng done (trusting CPU's manufacturer)
+Oct 10 13:05:29 sBaboyan kernel: [    0.295984] Console: colour VGA+ 80x25
+Oct 10 13:05:29 sBaboyan kernel: [    0.296027] printk: console [tty0] enabled
+Oct 10 13:05:29 sBaboyan kernel: [    0.296058] ACPI: Core revision 20201113
+Oct 10 13:05:29 sBaboyan kernel: [    0.296273] APIC: Switch to symmetric I/O mode setup
+Oct 10 13:05:29 sBaboyan kernel: [    0.296952] x2apic enabled
+Oct 10 13:05:29 sBaboyan kernel: [    0.297616] Switched APIC routing to physical x2apic.
+Oct 10 13:05:29 sBaboyan kernel: [    0.301681] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Oct 10 13:05:29 sBaboyan kernel: [    0.301762] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x256485898c4, max_idle_ns: 440795246280 ns
+Oct 10 13:05:29 sBaboyan kernel: [    0.301771] Calibrating delay loop (skipped) preset value.. 5188.23 BogoMIPS (lpj=10376464)
+Oct 10 13:05:29 sBaboyan kernel: [    0.301777] pid_max: default: 32768 minimum: 301
+Oct 10 13:05:29 sBaboyan kernel: [    0.301840] LSM: Security Framework initializing
+Oct 10 13:05:29 sBaboyan kernel: [    0.301859] Yama: becoming mindful.
+Oct 10 13:05:29 sBaboyan kernel: [    0.301936] AppArmor: AppArmor initialized
+Oct 10 13:05:29 sBaboyan kernel: [    0.302022] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+Oct 10 13:05:29 sBaboyan kernel: [    0.302031] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+Oct 10 13:05:29 sBaboyan kernel: [    0.302680] unchecked MSR access error: WRMSR to 0x3a (tried to write 0x0000000000000001) at rIP: 0xffffffffa547c5c4 (native_write_msr+0x4/0x30)
+Oct 10 13:05:29 sBaboyan kernel: [    0.302691] Call Trace:
+Oct 10 13:05:29 sBaboyan kernel: [    0.302694]  ? init_ia32_feat_ctl+0xa4/0x1d0
+Oct 10 13:05:29 sBaboyan kernel: [    0.302702]  init_intel+0xdd/0x400
+Oct 10 13:05:29 sBaboyan kernel: [    0.302710]  identify_cpu+0x2f3/0x580
+Oct 10 13:05:29 sBaboyan kernel: [    0.302718]  identify_boot_cpu+0x10/0x9a
+Oct 10 13:05:29 sBaboyan kernel: [    0.302727]  check_bugs+0x2a/0x8af
+Oct 10 13:05:29 sBaboyan kernel: [    0.302731]  ? __get_locked_pte+0x1c9/0x260
+Oct 10 13:05:29 sBaboyan kernel: [    0.302741]  start_kernel+0x6a5/0x6df
+Oct 10 13:05:29 sBaboyan kernel: [    0.302750]  x86_64_start_reservations+0x24/0x26
+Oct 10 13:05:29 sBaboyan kernel: [    0.302757]  x86_64_start_kernel+0x8b/0x8f
+Oct 10 13:05:29 sBaboyan kernel: [    0.302764]  secondary_startup_64_no_verify+0xc2/0xcb
+Oct 10 13:05:29 sBaboyan kernel: [    0.302818] Last level iTLB entries: 4KB 512, 2MB 8, 4MB 8
+Oct 10 13:05:29 sBaboyan kernel: [    0.302822] Last level dTLB entries: 4KB 512, 2MB 32, 4MB 32, 1GB 0
+Oct 10 13:05:29 sBaboyan kernel: [    0.302828] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Oct 10 13:05:29 sBaboyan kernel: [    0.302833] Spectre V2 : Mitigation: Full generic retpoline
+Oct 10 13:05:29 sBaboyan kernel: [    0.302836] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+Oct 10 13:05:29 sBaboyan kernel: [    0.302864] Speculative Store Bypass: Vulnerable
+Oct 10 13:05:29 sBaboyan kernel: [    0.302870] SRBDS: Unknown: Dependent on hypervisor status
+Oct 10 13:05:29 sBaboyan kernel: [    0.302872] MDS: Mitigation: Clear CPU buffers
+Oct 10 13:05:29 sBaboyan kernel: [    0.303197] Freeing SMP alternatives memory: 40K
+Oct 10 13:05:29 sBaboyan kernel: [    0.415606] smpboot: CPU0: Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz (family: 0x6, model: 0x3a, stepping: 0x9)
+Oct 10 13:05:29 sBaboyan kernel: [    0.415942] Performance Events: unsupported p6 CPU model 58 no PMU driver, software events only.
+Oct 10 13:05:29 sBaboyan kernel: [    0.415999] rcu: Hierarchical SRCU implementation.
+Oct 10 13:05:29 sBaboyan kernel: [    0.416824] NMI watchdog: Perf NMI watchdog permanently disabled
+Oct 10 13:05:29 sBaboyan kernel: [    0.416895] smp: Bringing up secondary CPUs ...
+Oct 10 13:05:29 sBaboyan kernel: [    0.417089] x86: Booting SMP configuration:
+Oct 10 13:05:29 sBaboyan kernel: [    0.417091] .... node  #0, CPUs:      #1
+Oct 10 13:05:29 sBaboyan kernel: [    0.033252] kvm-clock: cpu 1, msr 61e01041, secondary cpu clock
+Oct 10 13:05:29 sBaboyan kernel: [    0.421819] smp: Brought up 1 node, 2 CPUs
+Oct 10 13:05:29 sBaboyan kernel: [    0.421822] smpboot: Max logical packages: 1
+Oct 10 13:05:29 sBaboyan kernel: [    0.421823] smpboot: Total of 2 processors activated (10376.46 BogoMIPS)
+Oct 10 13:05:29 sBaboyan kernel: [    0.421969] devtmpfs: initialized
+Oct 10 13:05:29 sBaboyan kernel: [    0.421969] x86/mm: Memory block size: 128MB
+Oct 10 13:05:29 sBaboyan kernel: [    0.422102] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+Oct 10 13:05:29 sBaboyan kernel: [    0.422102] futex hash table entries: 512 (order: 3, 32768 bytes, linear)
+Oct 10 13:05:29 sBaboyan kernel: [    0.422102] pinctrl core: initialized pinctrl subsystem
+Oct 10 13:05:29 sBaboyan kernel: [    0.422102] PM: RTC time: 09:05:19, date: 2021-10-10
+Oct 10 13:05:29 sBaboyan kernel: [    0.422230] NET: Registered protocol family 16
+Oct 10 13:05:29 sBaboyan kernel: [    0.422333] DMA: preallocated 256 KiB GFP_KERNEL pool for atomic allocations
+Oct 10 13:05:29 sBaboyan kernel: [    0.422354] DMA: preallocated 256 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+Oct 10 13:05:29 sBaboyan kernel: [    0.422374] DMA: preallocated 256 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+Oct 10 13:05:29 sBaboyan kernel: [    0.422381] audit: initializing netlink subsys (disabled)
+Oct 10 13:05:29 sBaboyan kernel: [    0.422409] audit: type=2000 audit(1633856725.271:1): state=initialized audit_enabled=0 res=1
+Oct 10 13:05:29 sBaboyan kernel: [    0.422409] thermal_sys: Registered thermal governor 'fair_share'
+Oct 10 13:05:29 sBaboyan kernel: [    0.422409] thermal_sys: Registered thermal governor 'bang_bang'
+Oct 10 13:05:29 sBaboyan kernel: [    0.422409] thermal_sys: Registered thermal governor 'step_wise'
+Oct 10 13:05:29 sBaboyan kernel: [    0.422409] thermal_sys: Registered thermal governor 'user_space'
+Oct 10 13:05:29 sBaboyan kernel: [    0.422409] thermal_sys: Registered thermal governor 'power_allocator'
+Oct 10 13:05:29 sBaboyan kernel: [    0.422409] EISA bus registered
+Oct 10 13:05:29 sBaboyan kernel: [    0.422409] cpuidle: using governor ladder
+Oct 10 13:05:29 sBaboyan kernel: [    0.422409] cpuidle: using governor menu
+Oct 10 13:05:29 sBaboyan kernel: [    0.422409] ACPI: bus type PCI registered
+Oct 10 13:05:29 sBaboyan kernel: [    0.422409] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Oct 10 13:05:29 sBaboyan kernel: [    0.422409] PCI: Using configuration type 1 for base access
+Oct 10 13:05:29 sBaboyan kernel: [    0.428215] Kprobes globally optimized
+Oct 10 13:05:29 sBaboyan kernel: [    0.428246] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+Oct 10 13:05:29 sBaboyan kernel: [    0.429992] ACPI: Added _OSI(Module Device)
+Oct 10 13:05:29 sBaboyan kernel: [    0.429996] ACPI: Added _OSI(Processor Device)
+Oct 10 13:05:29 sBaboyan kernel: [    0.429999] ACPI: Added _OSI(3.0 _SCP Extensions)
+Oct 10 13:05:29 sBaboyan kernel: [    0.430002] ACPI: Added _OSI(Processor Aggregator Device)
+Oct 10 13:05:29 sBaboyan kernel: [    0.430006] ACPI: Added _OSI(Linux-Dell-Video)
+Oct 10 13:05:29 sBaboyan kernel: [    0.430010] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+Oct 10 13:05:29 sBaboyan kernel: [    0.430013] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+Oct 10 13:05:29 sBaboyan kernel: [    0.443267] ACPI: 2 ACPI AML tables successfully acquired and loaded
+Oct 10 13:05:29 sBaboyan kernel: [    0.449207] ACPI: Interpreter enabled
+Oct 10 13:05:29 sBaboyan kernel: [    0.449237] ACPI: (supports S0 S5)
+Oct 10 13:05:29 sBaboyan kernel: [    0.449240] ACPI: Using IOAPIC for interrupt routing
+Oct 10 13:05:29 sBaboyan kernel: [    0.450210] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Oct 10 13:05:29 sBaboyan kernel: [    0.450608] ACPI: Enabled 2 GPEs in block 00 to 07
+Oct 10 13:05:29 sBaboyan kernel: [    0.469529] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Oct 10 13:05:29 sBaboyan kernel: [    0.469542] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+Oct 10 13:05:29 sBaboyan kernel: [    0.471564] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+Oct 10 13:05:29 sBaboyan kernel: [    0.471594] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+Oct 10 13:05:29 sBaboyan kernel: [    0.472567] PCI host bridge to bus 0000:00
+Oct 10 13:05:29 sBaboyan kernel: [    0.472572] pci_bus 0000:00: root bus resource [bus 00-ff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.472578] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Oct 10 13:05:29 sBaboyan kernel: [    0.472583] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Oct 10 13:05:29 sBaboyan kernel: [    0.472588] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Oct 10 13:05:29 sBaboyan kernel: [    0.472594] pci_bus 0000:00: root bus resource [mem 0x80000000-0xfdffffff window]
+Oct 10 13:05:29 sBaboyan kernel: [    0.472691] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+Oct 10 13:05:29 sBaboyan kernel: [    0.474752] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+Oct 10 13:05:29 sBaboyan kernel: [    0.476246] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+Oct 10 13:05:29 sBaboyan kernel: [    0.476915] pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+Oct 10 13:05:29 sBaboyan kernel: [    0.477200] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+Oct 10 13:05:29 sBaboyan kernel: [    0.477205] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+Oct 10 13:05:29 sBaboyan kernel: [    0.477209] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+Oct 10 13:05:29 sBaboyan kernel: [    0.477214] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+Oct 10 13:05:29 sBaboyan kernel: [    0.478355] pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000
+Oct 10 13:05:29 sBaboyan kernel: [    0.479799] pci 0000:00:02.0: reg 0x10: [io  0xd010-0xd01f]
+Oct 10 13:05:29 sBaboyan kernel: [    0.481129] pci 0000:00:02.0: reg 0x14: [mem 0xe0000000-0xe0ffffff pref]
+Oct 10 13:05:29 sBaboyan kernel: [    0.482104] pci 0000:00:02.0: reg 0x18: [mem 0xf0000000-0xf01fffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.488808] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+Oct 10 13:05:29 sBaboyan kernel: [    0.489909] pci 0000:00:03.0: reg 0x10: [mem 0xf0200000-0xf021ffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.492223] pci 0000:00:03.0: reg 0x18: [io  0xd020-0xd027]
+Oct 10 13:05:29 sBaboyan kernel: [    0.499031] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+Oct 10 13:05:29 sBaboyan kernel: [    0.500252] pci 0000:00:04.0: reg 0x10: [io  0xd040-0xd05f]
+Oct 10 13:05:29 sBaboyan kernel: [    0.501406] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.501907] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+Oct 10 13:05:29 sBaboyan kernel: [    0.508290] pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
+Oct 10 13:05:29 sBaboyan kernel: [    0.508501] pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.508616] pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
+Oct 10 13:05:29 sBaboyan kernel: [    0.510488] pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
+Oct 10 13:05:29 sBaboyan kernel: [    0.511716] pci 0000:00:06.0: reg 0x10: [mem 0xf0804000-0xf0804fff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.519331] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+Oct 10 13:05:29 sBaboyan kernel: [    0.520050] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+Oct 10 13:05:29 sBaboyan kernel: [    0.520072] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+Oct 10 13:05:29 sBaboyan kernel: [    0.525293] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+Oct 10 13:05:29 sBaboyan kernel: [    0.525910] pci 0000:00:0d.0: reg 0x10: [io  0xd240-0xd247]
+Oct 10 13:05:29 sBaboyan kernel: [    0.527095] pci 0000:00:0d.0: reg 0x14: [io  0xd248-0xd24b]
+Oct 10 13:05:29 sBaboyan kernel: [    0.528262] pci 0000:00:0d.0: reg 0x18: [io  0xd250-0xd257]
+Oct 10 13:05:29 sBaboyan kernel: [    0.529927] pci 0000:00:0d.0: reg 0x1c: [io  0xd258-0xd25b]
+Oct 10 13:05:29 sBaboyan kernel: [    0.531211] pci 0000:00:0d.0: reg 0x20: [io  0xd260-0xd26f]
+Oct 10 13:05:29 sBaboyan kernel: [    0.532363] pci 0000:00:0d.0: reg 0x24: [mem 0xf0806000-0xf0807fff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.550844] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+Oct 10 13:05:29 sBaboyan kernel: [    0.551929] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+Oct 10 13:05:29 sBaboyan kernel: [    0.552257] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+Oct 10 13:05:29 sBaboyan kernel: [    0.552570] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+Oct 10 13:05:29 sBaboyan kernel: [    0.552961] iommu: Default domain type: Translated 
+Oct 10 13:05:29 sBaboyan kernel: [    0.552961] SCSI subsystem initialized
+Oct 10 13:05:29 sBaboyan kernel: [    0.552961] libata version 3.00 loaded.
+Oct 10 13:05:29 sBaboyan kernel: [    0.553807] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+Oct 10 13:05:29 sBaboyan kernel: [    0.553812] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Oct 10 13:05:29 sBaboyan kernel: [    0.553820] pci 0000:00:02.0: vgaarb: bridge control possible
+Oct 10 13:05:29 sBaboyan kernel: [    0.553832] vgaarb: loaded
+Oct 10 13:05:29 sBaboyan kernel: [    0.553875] ACPI: bus type USB registered
+Oct 10 13:05:29 sBaboyan kernel: [    0.553904] usbcore: registered new interface driver usbfs
+Oct 10 13:05:29 sBaboyan kernel: [    0.553920] usbcore: registered new interface driver hub
+Oct 10 13:05:29 sBaboyan kernel: [    0.553932] usbcore: registered new device driver usb
+Oct 10 13:05:29 sBaboyan kernel: [    0.553976] pps_core: LinuxPPS API ver. 1 registered
+Oct 10 13:05:29 sBaboyan kernel: [    0.553978] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Oct 10 13:05:29 sBaboyan kernel: [    0.553985] PTP clock support registered
+Oct 10 13:05:29 sBaboyan kernel: [    0.554045] EDAC MC: Ver: 3.0.0
+Oct 10 13:05:29 sBaboyan kernel: [    0.554224] NetLabel: Initializing
+Oct 10 13:05:29 sBaboyan kernel: [    0.554224] NetLabel:  domain hash size = 128
+Oct 10 13:05:29 sBaboyan kernel: [    0.554224] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Oct 10 13:05:29 sBaboyan kernel: [    0.554224] NetLabel:  unlabeled traffic allowed by default
+Oct 10 13:05:29 sBaboyan kernel: [    0.554224] PCI: Using ACPI for IRQ routing
+Oct 10 13:05:29 sBaboyan kernel: [    0.554224] PCI: pci_cache_line_size set to 64 bytes
+Oct 10 13:05:29 sBaboyan kernel: [    0.554224] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.554224] e820: reserve RAM buffer [mem 0x7fff0000-0x7fffffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.558346] clocksource: Switched to clocksource kvm-clock
+Oct 10 13:05:29 sBaboyan kernel: [    0.602100] VFS: Disk quotas dquot_6.6.0
+Oct 10 13:05:29 sBaboyan kernel: [    0.602130] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Oct 10 13:05:29 sBaboyan kernel: [    0.602328] AppArmor: AppArmor Filesystem Enabled
+Oct 10 13:05:29 sBaboyan kernel: [    0.602369] pnp: PnP ACPI init
+Oct 10 13:05:29 sBaboyan kernel: [    0.602528] pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+Oct 10 13:05:29 sBaboyan kernel: [    0.602685] pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
+Oct 10 13:05:29 sBaboyan kernel: [    0.604938] pnp: PnP ACPI: found 2 devices
+Oct 10 13:05:29 sBaboyan kernel: [    0.614953] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Oct 10 13:05:29 sBaboyan kernel: [    0.615118] NET: Registered protocol family 2
+Oct 10 13:05:29 sBaboyan kernel: [    0.615190] IP idents hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Oct 10 13:05:29 sBaboyan kernel: [    0.615948] tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes, linear)
+Oct 10 13:05:29 sBaboyan kernel: [    0.615970] TCP established hash table entries: 16384 (order: 5, 131072 bytes, linear)
+Oct 10 13:05:29 sBaboyan kernel: [    0.616065] TCP bind hash table entries: 16384 (order: 6, 262144 bytes, linear)
+Oct 10 13:05:29 sBaboyan kernel: [    0.616167] TCP: Hash tables configured (established 16384 bind 16384)
+Oct 10 13:05:29 sBaboyan kernel: [    0.616328] MPTCP token hash table entries: 2048 (order: 3, 49152 bytes, linear)
+Oct 10 13:05:29 sBaboyan kernel: [    0.616372] UDP hash table entries: 1024 (order: 3, 32768 bytes, linear)
+Oct 10 13:05:29 sBaboyan kernel: [    0.616391] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes, linear)
+Oct 10 13:05:29 sBaboyan kernel: [    0.616463] NET: Registered protocol family 1
+Oct 10 13:05:29 sBaboyan kernel: [    0.616472] NET: Registered protocol family 44
+Oct 10 13:05:29 sBaboyan kernel: [    0.616484] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+Oct 10 13:05:29 sBaboyan kernel: [    0.616490] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+Oct 10 13:05:29 sBaboyan kernel: [    0.616495] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+Oct 10 13:05:29 sBaboyan kernel: [    0.616501] pci_bus 0000:00: resource 7 [mem 0x80000000-0xfdffffff window]
+Oct 10 13:05:29 sBaboyan kernel: [    0.616603] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Oct 10 13:05:29 sBaboyan kernel: [    0.616629] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+Oct 10 13:05:29 sBaboyan kernel: [    0.616733] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Oct 10 13:05:29 sBaboyan kernel: [    0.620968] PCI: CLS 0 bytes, default 64
+Oct 10 13:05:29 sBaboyan kernel: [    0.621050] Trying to unpack rootfs image as initramfs...
+Oct 10 13:05:29 sBaboyan kernel: [    0.926811] Freeing initrd memory: 51808K
+Oct 10 13:05:29 sBaboyan kernel: [    0.926981] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x256485898c4, max_idle_ns: 440795246280 ns
+Oct 10 13:05:29 sBaboyan kernel: [    0.927090] clocksource: Switched to clocksource tsc
+Oct 10 13:05:29 sBaboyan kernel: [    0.927153] platform rtc_cmos: registered platform RTC device (no PNP device found)
+Oct 10 13:05:29 sBaboyan kernel: [    0.927192] check: Scanning for low memory corruption every 60 seconds
+Oct 10 13:05:29 sBaboyan kernel: [    0.927807] Initialise system trusted keyrings
+Oct 10 13:05:29 sBaboyan kernel: [    0.927817] Key type blacklist registered
+Oct 10 13:05:29 sBaboyan kernel: [    0.927915] workingset: timestamp_bits=36 max_order=19 bucket_order=0
+Oct 10 13:05:29 sBaboyan kernel: [    0.929964] zbud: loaded
+Oct 10 13:05:29 sBaboyan kernel: [    0.930693] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Oct 10 13:05:29 sBaboyan kernel: [    0.931070] fuse: init (API version 7.33)
+Oct 10 13:05:29 sBaboyan kernel: [    0.931415] integrity: Platform Keyring initialized
+Oct 10 13:05:29 sBaboyan kernel: [    0.941748] Key type asymmetric registered
+Oct 10 13:05:29 sBaboyan kernel: [    0.941752] Asymmetric key parser 'x509' registered
+Oct 10 13:05:29 sBaboyan kernel: [    0.941767] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 243)
+Oct 10 13:05:29 sBaboyan kernel: [    0.941865] io scheduler mq-deadline registered
+Oct 10 13:05:29 sBaboyan kernel: [    0.942071] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+Oct 10 13:05:29 sBaboyan kernel: [    0.942117] intel_idle: Please enable MWAIT in BIOS SETUP
+Oct 10 13:05:29 sBaboyan kernel: [    0.942363] ACPI: AC Adapter [AC] (on-line)
+Oct 10 13:05:29 sBaboyan kernel: [    0.942461] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Oct 10 13:05:29 sBaboyan kernel: [    0.942519] ACPI: Power Button [PWRF]
+Oct 10 13:05:29 sBaboyan kernel: [    0.942642] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+Oct 10 13:05:29 sBaboyan kernel: [    0.942681] ACPI: Sleep Button [SLPF]
+Oct 10 13:05:29 sBaboyan kernel: [    0.945431] battery: ACPI: Battery Slot [BAT0] (battery present)
+Oct 10 13:05:29 sBaboyan kernel: [    0.945538] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+Oct 10 13:05:29 sBaboyan kernel: [    0.948861] Linux agpgart interface v0.103
+Oct 10 13:05:29 sBaboyan kernel: [    2.321970] loop: module loaded
+Oct 10 13:05:29 sBaboyan kernel: [    2.322880] ata_piix 0000:00:01.1: version 2.13
+Oct 10 13:05:29 sBaboyan kernel: [    2.325129] scsi host0: ata_piix
+Oct 10 13:05:29 sBaboyan kernel: [    2.325869] scsi host1: ata_piix
+Oct 10 13:05:29 sBaboyan kernel: [    2.326046] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+Oct 10 13:05:29 sBaboyan kernel: [    2.326058] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+Oct 10 13:05:29 sBaboyan kernel: [    2.326906] libphy: Fixed MDIO Bus: probed
+Oct 10 13:05:29 sBaboyan kernel: [    2.326913] tun: Universal TUN/TAP device driver, 1.6
+Oct 10 13:05:29 sBaboyan kernel: [    2.327054] PPP generic driver version 2.4.2
+Oct 10 13:05:29 sBaboyan kernel: [    2.327286] VFIO - User Level meta-driver version: 0.3
+Oct 10 13:05:29 sBaboyan kernel: [    2.328272] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Oct 10 13:05:29 sBaboyan kernel: [    2.328282] ehci-pci: EHCI PCI platform driver
+Oct 10 13:05:29 sBaboyan kernel: [    2.328304] ehci-platform: EHCI generic platform driver
+Oct 10 13:05:29 sBaboyan kernel: [    2.328319] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Oct 10 13:05:29 sBaboyan kernel: [    2.328324] ohci-pci: OHCI PCI platform driver
+Oct 10 13:05:29 sBaboyan kernel: [    2.333533] ohci-pci 0000:00:06.0: OHCI PCI host controller
+Oct 10 13:05:29 sBaboyan kernel: [    2.333559] ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 1
+Oct 10 13:05:29 sBaboyan kernel: [    2.333907] ohci-pci 0000:00:06.0: irq 22, io mem 0xf0804000
+Oct 10 13:05:29 sBaboyan kernel: [    2.470030] usb usb1: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.11
+Oct 10 13:05:29 sBaboyan kernel: [    2.470049] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Oct 10 13:05:29 sBaboyan kernel: [    2.470063] usb usb1: Product: OHCI PCI host controller
+Oct 10 13:05:29 sBaboyan kernel: [    2.470074] usb usb1: Manufacturer: Linux 5.11.0-37-generic ohci_hcd
+Oct 10 13:05:29 sBaboyan kernel: [    2.470085] usb usb1: SerialNumber: 0000:00:06.0
+Oct 10 13:05:29 sBaboyan kernel: [    2.470663] hub 1-0:1.0: USB hub found
+Oct 10 13:05:29 sBaboyan kernel: [    2.470738] hub 1-0:1.0: 12 ports detected
+Oct 10 13:05:29 sBaboyan kernel: [    2.472935] ohci-platform: OHCI generic platform driver
+Oct 10 13:05:29 sBaboyan kernel: [    2.472980] uhci_hcd: USB Universal Host Controller Interface driver
+Oct 10 13:05:29 sBaboyan kernel: [    2.473220] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+Oct 10 13:05:29 sBaboyan kernel: [    2.474837] serio: i8042 KBD port at 0x60,0x64 irq 1
+Oct 10 13:05:29 sBaboyan kernel: [    2.474851] serio: i8042 AUX port at 0x60,0x64 irq 12
+Oct 10 13:05:29 sBaboyan kernel: [    2.475256] mousedev: PS/2 mouse device common for all mice
+Oct 10 13:05:29 sBaboyan kernel: [    2.476417] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+Oct 10 13:05:29 sBaboyan kernel: [    2.479133] rtc_cmos rtc_cmos: registered as rtc0
+Oct 10 13:05:29 sBaboyan kernel: [    2.479449] rtc_cmos rtc_cmos: setting system clock to 2021-10-10T09:05:21 UTC (1633856721)
+Oct 10 13:05:29 sBaboyan kernel: [    2.479541] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+Oct 10 13:05:29 sBaboyan kernel: [    2.479582] i2c /dev entries driver
+Oct 10 13:05:29 sBaboyan kernel: [    2.479790] device-mapper: uevent: version 1.0.3
+Oct 10 13:05:29 sBaboyan kernel: [    2.480086] device-mapper: ioctl: 4.43.0-ioctl (2020-10-01) initialised: dm-devel@redhat.com
+Oct 10 13:05:29 sBaboyan kernel: [    2.480193] platform eisa.0: Probing EISA bus 0
+Oct 10 13:05:29 sBaboyan kernel: [    2.480205] platform eisa.0: EISA: Cannot allocate resource for mainboard
+Oct 10 13:05:29 sBaboyan kernel: [    2.480215] platform eisa.0: Cannot allocate resource for EISA slot 1
+Oct 10 13:05:29 sBaboyan kernel: [    2.480226] platform eisa.0: Cannot allocate resource for EISA slot 2
+Oct 10 13:05:29 sBaboyan kernel: [    2.480237] platform eisa.0: Cannot allocate resource for EISA slot 3
+Oct 10 13:05:29 sBaboyan kernel: [    2.480247] platform eisa.0: Cannot allocate resource for EISA slot 4
+Oct 10 13:05:29 sBaboyan kernel: [    2.480258] platform eisa.0: Cannot allocate resource for EISA slot 5
+Oct 10 13:05:29 sBaboyan kernel: [    2.480269] platform eisa.0: Cannot allocate resource for EISA slot 6
+Oct 10 13:05:29 sBaboyan kernel: [    2.480280] platform eisa.0: Cannot allocate resource for EISA slot 7
+Oct 10 13:05:29 sBaboyan kernel: [    2.480290] platform eisa.0: Cannot allocate resource for EISA slot 8
+Oct 10 13:05:29 sBaboyan kernel: [    2.480300] platform eisa.0: EISA: Detected 0 cards
+Oct 10 13:05:29 sBaboyan kernel: [    2.480312] intel_pstate: CPU model not supported
+Oct 10 13:05:29 sBaboyan kernel: [    2.480553] ledtrig-cpu: registered to indicate activity on CPUs
+Oct 10 13:05:29 sBaboyan kernel: [    2.480684] drop_monitor: Initializing network drop monitor service
+Oct 10 13:05:29 sBaboyan kernel: [    2.481397] NET: Registered protocol family 10
+Oct 10 13:05:29 sBaboyan kernel: [    2.505574] ata2.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+Oct 10 13:05:29 sBaboyan kernel: [    2.508493] scsi 1:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+Oct 10 13:05:29 sBaboyan kernel: [    2.527005] sr 1:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+Oct 10 13:05:29 sBaboyan kernel: [    2.527012] cdrom: Uniform CD-ROM driver Revision: 3.20
+Oct 10 13:05:29 sBaboyan kernel: [    2.528320] Segment Routing with IPv6
+Oct 10 13:05:29 sBaboyan kernel: [    2.528346] NET: Registered protocol family 17
+Oct 10 13:05:29 sBaboyan kernel: [    2.528413] Key type dns_resolver registered
+Oct 10 13:05:29 sBaboyan kernel: [    2.528639] IPI shorthand broadcast: enabled
+Oct 10 13:05:29 sBaboyan kernel: [    2.528648] sched_clock: Marking stable (2499304441, 29252703)->(2528639594, -82450)
+Oct 10 13:05:29 sBaboyan kernel: [    2.528836] registered taskstats version 1
+Oct 10 13:05:29 sBaboyan kernel: [    2.528861] Loading compiled-in X.509 certificates
+Oct 10 13:05:29 sBaboyan kernel: [    2.529774] Loaded X.509 cert 'Build time autogenerated kernel key: 1eb41faa13c76e3515c5d31902a2dea6fce62d74'
+Oct 10 13:05:29 sBaboyan kernel: [    2.530839] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+Oct 10 13:05:29 sBaboyan kernel: [    2.531848] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+Oct 10 13:05:29 sBaboyan kernel: [    2.531852] blacklist: Loading compiled-in revocation X.509 certificates
+Oct 10 13:05:29 sBaboyan kernel: [    2.531888] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+Oct 10 13:05:29 sBaboyan kernel: [    2.531988] zswap: loaded using pool lzo/zbud
+Oct 10 13:05:29 sBaboyan kernel: [    2.532245] Key type ._fscrypt registered
+Oct 10 13:05:29 sBaboyan kernel: [    2.532247] Key type .fscrypt registered
+Oct 10 13:05:29 sBaboyan kernel: [    2.532248] Key type fscrypt-provisioning registered
+Oct 10 13:05:29 sBaboyan kernel: [    2.538151] Key type encrypted registered
+Oct 10 13:05:29 sBaboyan kernel: [    2.538157] AppArmor: AppArmor sha1 policy hashing enabled
+Oct 10 13:05:29 sBaboyan kernel: [    2.538166] ima: No TPM chip found, activating TPM-bypass!
+Oct 10 13:05:29 sBaboyan kernel: [    2.538172] ima: Allocated hash algorithm: sha1
+Oct 10 13:05:29 sBaboyan kernel: [    2.538180] ima: No architecture policies found
+Oct 10 13:05:29 sBaboyan kernel: [    2.538191] evm: Initialising EVM extended attributes:
+Oct 10 13:05:29 sBaboyan kernel: [    2.538191] evm: security.selinux
+Oct 10 13:05:29 sBaboyan kernel: [    2.538192] evm: security.SMACK64
+Oct 10 13:05:29 sBaboyan kernel: [    2.538193] evm: security.SMACK64EXEC
+Oct 10 13:05:29 sBaboyan kernel: [    2.538194] evm: security.SMACK64TRANSMUTE
+Oct 10 13:05:29 sBaboyan kernel: [    2.538195] evm: security.SMACK64MMAP
+Oct 10 13:05:29 sBaboyan kernel: [    2.538195] evm: security.apparmor
+Oct 10 13:05:29 sBaboyan kernel: [    2.538196] evm: security.ima
+Oct 10 13:05:29 sBaboyan kernel: [    2.538197] evm: security.capability
+Oct 10 13:05:29 sBaboyan kernel: [    2.538197] evm: HMAC attrs: 0x1
+Oct 10 13:05:29 sBaboyan kernel: [    2.538496] PM:   Magic number: 9:242:70
+Oct 10 13:05:29 sBaboyan kernel: [    2.538539]  memory: hash matches
+Oct 10 13:05:29 sBaboyan kernel: [    2.538806] RAS: Correctable Errors collector initialized.
+Oct 10 13:05:29 sBaboyan kernel: [    2.565941] sr 1:0:0:0: Attached scsi CD-ROM sr0
+Oct 10 13:05:29 sBaboyan kernel: [    2.566310] sr 1:0:0:0: Attached scsi generic sg0 type 5
+Oct 10 13:05:29 sBaboyan kernel: [    2.568904] Freeing unused decrypted memory: 2036K
+Oct 10 13:05:29 sBaboyan kernel: [    2.569402] Freeing unused kernel image (initmem) memory: 2688K
+Oct 10 13:05:29 sBaboyan kernel: [    2.673416] Write protecting the kernel read-only data: 22528k
+Oct 10 13:05:29 sBaboyan kernel: [    2.676597] Freeing unused kernel image (text/rodata gap) memory: 2036K
+Oct 10 13:05:29 sBaboyan kernel: [    2.677996] Freeing unused kernel image (rodata/data gap) memory: 684K
+Oct 10 13:05:29 sBaboyan kernel: [    2.831053] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Oct 10 13:05:29 sBaboyan kernel: [    2.831059] x86/mm: Checking user space page tables
+Oct 10 13:05:29 sBaboyan kernel: [    2.905957] usb 1-1: new full-speed USB device number 2 using ohci-pci
+Oct 10 13:05:29 sBaboyan kernel: [    2.950978] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Oct 10 13:05:29 sBaboyan kernel: [    2.950989] Run /init as init process
+Oct 10 13:05:29 sBaboyan kernel: [    2.950991]   with arguments:
+Oct 10 13:05:29 sBaboyan kernel: [    2.950994]     /init
+Oct 10 13:05:29 sBaboyan kernel: [    2.950997]     splash
+Oct 10 13:05:29 sBaboyan kernel: [    2.950999]   with environment:
+Oct 10 13:05:29 sBaboyan kernel: [    2.951002]     HOME=/
+Oct 10 13:05:29 sBaboyan kernel: [    2.951004]     TERM=linux
+Oct 10 13:05:29 sBaboyan kernel: [    2.951007]     BOOT_IMAGE=/boot/vmlinuz-5.11.0-37-generic
+Oct 10 13:05:29 sBaboyan kernel: [    3.137394] e1000: Intel(R) PRO/1000 Network Driver
+Oct 10 13:05:29 sBaboyan kernel: [    3.137399] e1000: Copyright (c) 1999-2006 Intel Corporation.
+Oct 10 13:05:29 sBaboyan kernel: [    3.153391] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Oct 10 13:05:29 sBaboyan kernel: [    3.153601] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input4
+Oct 10 13:05:29 sBaboyan kernel: [    3.158875] piix4_smbus 0000:00:07.0: SMBus Host Controller at 0x4100, revision 0
+Oct 10 13:05:29 sBaboyan kernel: [    3.185706] ahci 0000:00:0d.0: version 3.0
+Oct 10 13:05:29 sBaboyan kernel: [    3.195337] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+Oct 10 13:05:29 sBaboyan kernel: [    3.195644] ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+Oct 10 13:05:29 sBaboyan kernel: [    3.195653] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+Oct 10 13:05:29 sBaboyan kernel: [    3.196233] scsi host2: ahci
+Oct 10 13:05:29 sBaboyan kernel: [    3.196353] ata3: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806100 irq 21
+Oct 10 13:05:29 sBaboyan kernel: [    3.246386] usb 1-1: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
+Oct 10 13:05:29 sBaboyan kernel: [    3.246394] usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+Oct 10 13:05:29 sBaboyan kernel: [    3.246400] usb 1-1: Product: USB Tablet
+Oct 10 13:05:29 sBaboyan kernel: [    3.246404] usb 1-1: Manufacturer: VirtualBox
+Oct 10 13:05:29 sBaboyan kernel: [    3.282504] hid: raw HID events driver (C) Jiri Kosina
+Oct 10 13:05:29 sBaboyan kernel: [    3.297252] usbcore: registered new interface driver usbhid
+Oct 10 13:05:29 sBaboyan kernel: [    3.297256] usbhid: USB HID core driver
+Oct 10 13:05:29 sBaboyan kernel: [    3.302499] input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:80EE:0021.0001/input/input6
+Oct 10 13:05:29 sBaboyan kernel: [    3.303406] hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+Oct 10 13:05:29 sBaboyan kernel: [    3.389055] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+Oct 10 13:05:29 sBaboyan kernel: [    3.510367] ata3: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Oct 10 13:05:29 sBaboyan kernel: [    3.510560] ata3.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Oct 10 13:05:29 sBaboyan kernel: [    3.510564] ata3.00: 85870464 sectors, multi 128: LBA48 NCQ (depth 32)
+Oct 10 13:05:29 sBaboyan kernel: [    3.510895] ata3.00: configured for UDMA/133
+Oct 10 13:05:29 sBaboyan kernel: [    3.511156] scsi 2:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Oct 10 13:05:29 sBaboyan kernel: [    3.511577] sd 2:0:0:0: [sda] 85870464 512-byte logical blocks: (44.0 GB/40.9 GiB)
+Oct 10 13:05:29 sBaboyan kernel: [    3.511596] sd 2:0:0:0: [sda] Write Protect is off
+Oct 10 13:05:29 sBaboyan kernel: [    3.511601] sd 2:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Oct 10 13:05:29 sBaboyan kernel: [    3.511632] sd 2:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Oct 10 13:05:29 sBaboyan kernel: [    3.511690] sd 2:0:0:0: Attached scsi generic sg1 type 0
+Oct 10 13:05:29 sBaboyan kernel: [    3.623623]  sda: sda1 sda2 < sda5 >
+Oct 10 13:05:29 sBaboyan kernel: [    3.638062] sd 2:0:0:0: [sda] Attached SCSI disk
+Oct 10 13:05:29 sBaboyan kernel: [    3.680577] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:21:65:79
+Oct 10 13:05:29 sBaboyan kernel: [    3.680592] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Oct 10 13:05:29 sBaboyan kernel: [    3.682699] e1000 0000:00:03.0 enp0s3: renamed from eth0
+Oct 10 13:05:29 sBaboyan kernel: [    3.808136] EXT4-fs (sda5): mounted filesystem with ordered data mode. Opts: (null). Quota mode: none.
+Oct 10 13:05:29 sBaboyan kernel: [    4.125376] systemd[1]: Inserted module 'autofs4'
+Oct 10 13:05:29 sBaboyan kernel: [    4.187277] systemd[1]: systemd 245.4-4ubuntu3.13 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+Oct 10 13:05:29 sBaboyan kernel: [    4.187362] systemd[1]: Detected virtualization oracle.
+Oct 10 13:05:29 sBaboyan kernel: [    4.187382] systemd[1]: Detected architecture x86-64.
+Oct 10 13:05:29 sBaboyan kernel: [    4.207521] systemd[1]: Set hostname to <sBaboyan>.
+Oct 10 13:05:29 sBaboyan kernel: [    4.547782] systemd[1]: Created slice system-modprobe.slice.
+Oct 10 13:05:29 sBaboyan kernel: [    4.548307] systemd[1]: Created slice system-systemd\x2dfsck.slice.
+Oct 10 13:05:29 sBaboyan kernel: [    4.548781] systemd[1]: Created slice User and Session Slice.
+Oct 10 13:05:29 sBaboyan kernel: [    4.548884] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+Oct 10 13:05:29 sBaboyan kernel: [    4.549178] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+Oct 10 13:05:29 sBaboyan kernel: [    4.549261] systemd[1]: Reached target User and Group Name Lookups.
+Oct 10 13:05:29 sBaboyan kernel: [    4.549289] systemd[1]: Reached target Remote File Systems.
+Oct 10 13:05:29 sBaboyan kernel: [    4.549309] systemd[1]: Reached target Slices.
+Oct 10 13:05:29 sBaboyan kernel: [    4.549347] systemd[1]: Reached target System Time Set.
+Oct 10 13:05:29 sBaboyan kernel: [    4.549367] systemd[1]: Reached target System Time Synchronized.
+Oct 10 13:05:29 sBaboyan kernel: [    4.549686] systemd[1]: Listening on Syslog Socket.
+Oct 10 13:05:29 sBaboyan kernel: [    4.549936] systemd[1]: Listening on fsck to fsckd communication Socket.
+Oct 10 13:05:29 sBaboyan kernel: [    4.550044] systemd[1]: Listening on initctl Compatibility Named Pipe.
+Oct 10 13:05:29 sBaboyan kernel: [    4.550510] systemd[1]: Listening on Journal Audit Socket.
+Oct 10 13:05:29 sBaboyan kernel: [    4.550700] systemd[1]: Listening on Journal Socket (/dev/log).
+Oct 10 13:05:29 sBaboyan kernel: [    4.550955] systemd[1]: Listening on Journal Socket.
+Oct 10 13:05:29 sBaboyan kernel: [    4.551169] systemd[1]: Listening on udev Control Socket.
+Oct 10 13:05:29 sBaboyan kernel: [    4.551296] systemd[1]: Listening on udev Kernel Socket.
+Oct 10 13:05:29 sBaboyan kernel: [    4.553231] systemd[1]: Mounting Huge Pages File System...
+Oct 10 13:05:29 sBaboyan kernel: [    4.555120] systemd[1]: Mounting POSIX Message Queue File System...
+Oct 10 13:05:29 sBaboyan kernel: [    4.557122] systemd[1]: Mounting Kernel Debug File System...
+Oct 10 13:05:29 sBaboyan kernel: [    4.559046] systemd[1]: Mounting Kernel Trace File System...
+Oct 10 13:05:29 sBaboyan kernel: [    4.562134] systemd[1]: Starting Journal Service...
+Oct 10 13:05:29 sBaboyan kernel: [    4.564156] systemd[1]: Starting Set the console keyboard layout...
+Oct 10 13:05:29 sBaboyan kernel: [    4.566599] systemd[1]: Starting Create list of static device nodes for the current kernel...
+Oct 10 13:05:29 sBaboyan kernel: [    4.577354] systemd[1]: Starting Load Kernel Module drm...
+Oct 10 13:05:29 sBaboyan kernel: [    4.585385] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+Oct 10 13:05:29 sBaboyan kernel: [    4.585455] systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+Oct 10 13:05:29 sBaboyan kernel: [    4.590759] systemd[1]: Starting Load Kernel Modules...
+Oct 10 13:05:29 sBaboyan kernel: [    4.601614] systemd[1]: Starting Remount Root and Kernel File Systems...
+Oct 10 13:05:29 sBaboyan kernel: [    4.606105] systemd[1]: Starting udev Coldplug all Devices...
+Oct 10 13:05:29 sBaboyan kernel: [    4.610970] systemd[1]: Starting Uncomplicated firewall...
+Oct 10 13:05:29 sBaboyan kernel: [    4.622782] EXT4-fs (sda5): re-mounted. Opts: errors=remount-ro. Quota mode: none.
+Oct 10 13:05:29 sBaboyan kernel: [    4.647573] systemd[1]: Mounted Huge Pages File System.
+Oct 10 13:05:29 sBaboyan kernel: [    4.647936] systemd[1]: Mounted POSIX Message Queue File System.
+Oct 10 13:05:29 sBaboyan kernel: [    4.648151] systemd[1]: Mounted Kernel Debug File System.
+Oct 10 13:05:29 sBaboyan kernel: [    4.648453] systemd[1]: Mounted Kernel Trace File System.
+Oct 10 13:05:29 sBaboyan kernel: [    4.649519] systemd[1]: Finished Create list of static device nodes for the current kernel.
+Oct 10 13:05:29 sBaboyan kernel: [    4.650112] systemd[1]: modprobe@drm.service: Succeeded.
+Oct 10 13:05:29 sBaboyan kernel: [    4.650933] systemd[1]: Finished Load Kernel Module drm.
+Oct 10 13:05:29 sBaboyan kernel: [    4.651884] systemd[1]: Finished Remount Root and Kernel File Systems.
+Oct 10 13:05:29 sBaboyan kernel: [    4.652816] systemd[1]: Finished Uncomplicated firewall.
+Oct 10 13:05:29 sBaboyan kernel: [    4.662595] systemd[1]: Activating swap /swapfile...
+Oct 10 13:05:29 sBaboyan kernel: [    4.664461] systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+Oct 10 13:05:29 sBaboyan kernel: [    4.664557] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+Oct 10 13:05:29 sBaboyan kernel: [    4.668843] systemd[1]: Starting Load/Save Random Seed...
+Oct 10 13:05:29 sBaboyan kernel: [    4.671341] lp: driver loaded but no devices found
+Oct 10 13:05:29 sBaboyan kernel: [    4.678241] systemd[1]: Starting Create System Users...
+Oct 10 13:05:29 sBaboyan kernel: [    4.686047] Adding 1964660k swap on /swapfile.  Priority:-2 extents:6 across:2128500k FS
+Oct 10 13:05:29 sBaboyan kernel: [    4.686728] systemd[1]: Activated swap /swapfile.
+Oct 10 13:05:29 sBaboyan kernel: [    4.687092] systemd[1]: Reached target Swap.
+Oct 10 13:05:29 sBaboyan kernel: [    4.699034] ppdev: user-space parallel port driver
+Oct 10 13:05:29 sBaboyan kernel: [    4.709979] systemd[1]: Finished Load/Save Random Seed.
+Oct 10 13:05:29 sBaboyan kernel: [    4.712595] systemd[1]: Finished Create System Users.
+Oct 10 13:05:29 sBaboyan kernel: [    4.714917] systemd[1]: Starting Create Static Device Nodes in /dev...
+Oct 10 13:05:29 sBaboyan kernel: [    4.760370] systemd[1]: Finished Create Static Device Nodes in /dev.
+Oct 10 13:05:29 sBaboyan kernel: [    4.770999] systemd[1]: Starting udev Kernel Device Manager...
+Oct 10 13:05:29 sBaboyan kernel: [    4.824612] [drm] DMA map mode: Caching DMA mappings.
+Oct 10 13:05:29 sBaboyan kernel: [    4.824689] [drm] Capabilities:
+Oct 10 13:05:29 sBaboyan kernel: [    4.824691] [drm]   Cursor.
+Oct 10 13:05:29 sBaboyan kernel: [    4.824693] [drm]   Cursor bypass 2.
+Oct 10 13:05:29 sBaboyan kernel: [    4.824694] [drm]   Alpha cursor.
+Oct 10 13:05:29 sBaboyan kernel: [    4.824696] [drm]   3D.
+Oct 10 13:05:29 sBaboyan kernel: [    4.824697] [drm]   Extended Fifo.
+Oct 10 13:05:29 sBaboyan kernel: [    4.824699] [drm]   Pitchlock.
+Oct 10 13:05:29 sBaboyan kernel: [    4.824701] [drm]   Irq mask.
+Oct 10 13:05:29 sBaboyan kernel: [    4.824703] [drm]   GMR.
+Oct 10 13:05:29 sBaboyan kernel: [    4.824705] [drm]   Traces.
+Oct 10 13:05:29 sBaboyan kernel: [    4.824707] [drm]   GMR2.
+Oct 10 13:05:29 sBaboyan kernel: [    4.824709] [drm]   Screen Object 2.
+Oct 10 13:05:29 sBaboyan kernel: [    4.824711] [drm] Max GMR ids is 8192
+Oct 10 13:05:29 sBaboyan kernel: [    4.824715] [drm] Max number of GMR pages is 1048576
+Oct 10 13:05:29 sBaboyan kernel: [    4.824719] [drm] Max dedicated hypervisor surface memory is 507904 kiB
+Oct 10 13:05:29 sBaboyan kernel: [    4.824722] [drm] Maximum display memory size is 16384 kiB
+Oct 10 13:05:29 sBaboyan kernel: [    4.824725] [drm] VRAM at 0xe0000000 size is 16384 kiB
+Oct 10 13:05:29 sBaboyan kernel: [    4.824729] [drm] MMIO at 0xf0000000 size is 2048 kiB
+Oct 10 13:05:29 sBaboyan kernel: [    4.841952] [TTM] Zone  kernel: Available graphics memory: 1016358 KiB
+Oct 10 13:05:29 sBaboyan kernel: [    4.873863] systemd[1]: Started Journal Service.
+Oct 10 13:05:29 sBaboyan kernel: [    4.894103] systemd-journald[228]: Received client request to flush runtime journal.
+Oct 10 13:05:29 sBaboyan kernel: [    4.911587] [drm] Screen Objects Display Unit initialized
+Oct 10 13:05:29 sBaboyan kernel: [    4.911756] [drm] width 720
+Oct 10 13:05:29 sBaboyan kernel: [    4.911775] [drm] height 400
+Oct 10 13:05:29 sBaboyan kernel: [    4.911793] [drm] bpp 32
+Oct 10 13:05:29 sBaboyan kernel: [    4.912114] [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+Oct 10 13:05:29 sBaboyan kernel: [    4.912130] [drm] Atomic: yes.
+Oct 10 13:05:29 sBaboyan kernel: [    4.912138] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+Oct 10 13:05:29 sBaboyan kernel: [    4.914228] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+Oct 10 13:05:29 sBaboyan kernel: [    4.927345] fbcon: svgadrmfb (fb0) is primary device
+Oct 10 13:05:29 sBaboyan kernel: [    4.935825] Console: switching to colour frame buffer device 100x37
+Oct 10 13:05:29 sBaboyan kernel: [    4.944796] [drm] Initialized vmwgfx 2.18.0 20200114 for 0000:00:02.0 on minor 0
+Oct 10 13:05:29 sBaboyan kernel: [    5.136731] loop0: detected capacity change from 0 to 8
+Oct 10 13:05:29 sBaboyan kernel: [    5.161030] loop1: detected capacity change from 0 to 113536
+Oct 10 13:05:29 sBaboyan kernel: [    5.187689] loop2: detected capacity change from 0 to 133320
+Oct 10 13:05:29 sBaboyan kernel: [    5.205949] loop3: detected capacity change from 0 to 448512
+Oct 10 13:05:29 sBaboyan kernel: [    5.217443] loop4: detected capacity change from 0 to 66168
+Oct 10 13:05:29 sBaboyan kernel: [    5.245874] loop5: detected capacity change from 0 to 133552
+Oct 10 13:05:29 sBaboyan kernel: [    5.254244] loop6: detected capacity change from 0 to 104360
+Oct 10 13:05:29 sBaboyan kernel: [    5.255001] loop7: detected capacity change from 0 to 66144
+Oct 10 13:05:29 sBaboyan kernel: [    5.786727] vboxguest: loading out-of-tree module taints kernel.
+Oct 10 13:05:29 sBaboyan kernel: [    5.787171] vboxguest: module verification failed: signature and/or required key missing - tainting kernel
+Oct 10 13:05:29 sBaboyan kernel: [    5.872369] vgdrvHeartbeatInit: Setting up heartbeat to trigger every 2000 milliseconds
+Oct 10 13:05:29 sBaboyan kernel: [    5.882409] input: Unspecified device as /devices/pci0000:00/0000:00:04.0/input/input7
+Oct 10 13:05:29 sBaboyan kernel: [    5.905736] vboxguest: Successfully loaded version 6.1.26 r145957
+Oct 10 13:05:29 sBaboyan kernel: [    5.905789] vboxguest: misc device minor 122, IRQ 20, I/O port d040, MMIO at 00000000f0400000 (size 0x400000)
+Oct 10 13:05:29 sBaboyan kernel: [    5.905817] vboxguest: Successfully loaded version 6.1.26 r145957 (interface 0x00010004)
+Oct 10 13:05:29 sBaboyan kernel: [    6.123121] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+Oct 10 13:05:29 sBaboyan kernel: [    6.165342] cryptd: max_cpu_qlen set to 1000
+Oct 10 13:05:29 sBaboyan kernel: [    6.247302] AVX version of gcm_enc/dec engaged.
+Oct 10 13:05:29 sBaboyan kernel: [    6.247306] AES CTR mode by8 optimization enabled
+Oct 10 13:05:29 sBaboyan kernel: [    6.895144] snd_intel8x0 0000:00:05.0: allow list rate for 1028:0177 is 48000
+Oct 10 13:05:29 sBaboyan kernel: [    9.733823] audit: type=1400 audit(1633856728.747:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-senddoc" pid=513 comm="apparmor_parser"
+Oct 10 13:05:29 sBaboyan kernel: [    9.734348] audit: type=1400 audit(1633856728.751:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/snapd/snap-confine" pid=514 comm="apparmor_parser"
+Oct 10 13:05:29 sBaboyan kernel: [    9.734352] audit: type=1400 audit(1633856728.751:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=514 comm="apparmor_parser"
+Oct 10 13:05:29 sBaboyan kernel: [    9.770010] audit: type=1400 audit(1633856728.783:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lsb_release" pid=516 comm="apparmor_parser"
+Oct 10 13:05:29 sBaboyan kernel: [    9.776287] audit: type=1400 audit(1633856728.791:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=515 comm="apparmor_parser"
+Oct 10 13:05:29 sBaboyan kernel: [    9.776299] audit: type=1400 audit(1633856728.791:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=515 comm="apparmor_parser"
+Oct 10 13:05:29 sBaboyan kernel: [    9.794634] audit: type=1400 audit(1633856728.811:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ippusbxd" pid=521 comm="apparmor_parser"
+Oct 10 13:05:29 sBaboyan kernel: [    9.823457] audit: type=1400 audit(1633856728.839:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-oopslash" pid=522 comm="apparmor_parser"
+Oct 10 13:05:29 sBaboyan kernel: [    9.828557] audit: type=1400 audit(1633856728.843:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=520 comm="apparmor_parser"
+Oct 10 13:05:29 sBaboyan kernel: [    9.828569] audit: type=1400 audit(1633856728.843:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-helper" pid=520 comm="apparmor_parser"
+Oct 10 13:05:30 sBaboyan NetworkManager[561]: <info>  [1633856730.0748] manager[0x55f47a7a6030]: monitoring kernel firmware directory '/lib/firmware'.
+Oct 10 13:05:31 sBaboyan kernel: [   11.982461] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Oct 10 13:05:31 sBaboyan kernel: [   11.985273] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+Oct 10 13:05:31 sBaboyan systemd[1]: Starting Tool to automatically collect and submit kernel crash signatures...
+Oct 10 13:05:31 sBaboyan systemd[1]: kerneloops.service: Found left-over process 695 (kerneloops) in control group while starting unit. Ignoring.
+Oct 10 13:05:31 sBaboyan systemd[1]: Started Tool to automatically collect and submit kernel crash signatures.
+Oct 10 13:05:32 sBaboyan vboxadd[752]: VirtualBox Guest Additions: Building the VirtualBox Guest Additions kernel
+Oct 10 13:05:32 sBaboyan vboxadd[754]: VirtualBox Guest Additions: To build modules for other installed kernels, run
+Oct 10 13:05:32 sBaboyan kernel: [   13.308915] loop8: detected capacity change from 0 to 8
+Oct 10 13:05:41 sBaboyan vboxadd[830]: VirtualBox Guest Additions: Running kernel modules will not be replaced until
+Oct 10 13:05:41 sBaboyan kernel: [   22.618995] vboxvideo: loading version 6.1.26 r145957
+Oct 10 13:05:41 sBaboyan kernel: [   22.758012] 09:05:41.778578 main     VBoxService 6.1.26 r145957 (verbosity: 0) linux.amd64 (Jul 28 2021 18:25:57) release log
+Oct 10 13:05:41 sBaboyan kernel: [   22.758012] 09:05:41.778582 main     Log opened 2021-10-10T09:05:41.778569000Z
+Oct 10 13:05:41 sBaboyan kernel: [   22.758090] 09:05:41.778731 main     OS Product: Linux
+Oct 10 13:05:41 sBaboyan kernel: [   22.758143] 09:05:41.778788 main     OS Release: 5.11.0-37-generic
+Oct 10 13:05:41 sBaboyan kernel: [   22.758195] 09:05:41.778840 main     OS Version: #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021
+Oct 10 13:05:41 sBaboyan kernel: [   22.758280] 09:05:41.778892 main     Executable: /opt/VBoxGuestAdditions-6.1.26/sbin/VBoxService
+Oct 10 13:05:41 sBaboyan kernel: [   22.758280] 09:05:41.778894 main     Process ID: 884
+Oct 10 13:05:41 sBaboyan kernel: [   22.758280] 09:05:41.778896 main     Package type: LINUX_64BITS_GENERIC
+Oct 10 13:05:41 sBaboyan kernel: [   22.759713] 09:05:41.780334 main     6.1.26 r145957 started. Verbose level = 0
+Oct 10 13:05:41 sBaboyan kernel: [   22.767070] 09:05:41.787656 main     vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+Oct 10 13:05:42 sBaboyan /usr/lib/gdm3/gdm-x-session[927]: (WW) VGA arbiter: cannot open kernel arbiter, no multi-card support
+Oct 10 13:05:52 sBaboyan kernel: [   33.074709] rfkill: input handler disabled
+Oct 10 13:05:53 sBaboyan kernel: [   34.384181] kauditd_printk_skb: 28 callbacks suppressed
+Oct 10 13:05:53 sBaboyan kernel: [   34.384185] audit: type=1400 audit(1633856753.398:40): apparmor="DENIED" operation="capable" profile="/snap/snapd/13170/usr/lib/snapd/snap-confine" pid=1483 comm="snap-confine" capability=4  capname="fsetid"
+Oct 10 13:06:02 sBaboyan kernel: [   44.063174] audit: type=1326 audit(1633856762.991:41): auid=1000 uid=1000 gid=1000 ses=2 subj=snap.snap-store.ubuntu-software pid=1483 comm="snap-store" exe="/snap/snap-store/547/usr/bin/snap-store" sig=0 arch=c000003e syscall=314 compat=0 ip=0x7efc420b1639 code=0x50000
+Oct 10 13:06:03 sBaboyan systemd[1]: Startup finished in 4.034s (kernel) + 40.056s (userspace) = 44.090s.
+Oct 10 13:06:09 sBaboyan kernel: [   50.260341] audit: type=1107 audit(1633856769.096:42): pid=559 uid=103 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/PolicyKit1/Authority" interface="org.freedesktop.DBus.Properties" member="GetAll" mask="send" name=":1.9" pid=1483 label="snap.snap-store.ubuntu-software" peer_pid=576 peer_label="unconfined"
+Oct 10 13:06:09 sBaboyan kernel: [   50.260341]  exe="/usr/bin/dbus-daemon" sauid=103 hostname=? addr=? terminal=?'
+Oct 10 13:06:09 sBaboyan kernel: [   50.261245] audit: type=1107 audit(1633856769.096:43): pid=559 uid=103 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/PolicyKit1/Authority" interface="org.freedesktop.PolicyKit1.Authority" member="CheckAuthorization" mask="send" name=":1.9" pid=1483 label="snap.snap-store.ubuntu-software" peer_pid=576 peer_label="unconfined"
+Oct 10 13:06:09 sBaboyan kernel: [   50.261245]  exe="/usr/bin/dbus-daemon" sauid=103 hostname=? addr=? terminal=?'
+Oct 10 13:06:09 sBaboyan kernel: [   50.304320] audit: type=1107 audit(1633856769.139:44): pid=559 uid=103 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/PolicyKit1/Authority" interface="org.freedesktop.DBus.Properties" member="GetAll" mask="send" name=":1.9" pid=1483 label="snap.snap-store.ubuntu-software" peer_pid=576 peer_label="unconfined"
+Oct 10 13:06:09 sBaboyan kernel: [   50.304320]  exe="/usr/bin/dbus-daemon" sauid=103 hostname=? addr=? terminal=?'
+Oct 10 13:06:09 sBaboyan kernel: [   50.305224] audit: type=1107 audit(1633856769.139:45): pid=559 uid=103 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/PolicyKit1/Authority" interface="org.freedesktop.PolicyKit1.Authority" member="CheckAuthorization" mask="send" name=":1.9" pid=1483 label="snap.snap-store.ubuntu-software" peer_pid=576 peer_label="unconfined"
+Oct 10 13:06:09 sBaboyan kernel: [   50.305224]  exe="/usr/bin/dbus-daemon" sauid=103 hostname=? addr=? terminal=?'
+Oct 10 13:06:10 sBaboyan kernel: [   51.162277] audit: type=1400 audit(1633856769.992:46): apparmor="DENIED" operation="open" profile="snap.snap-store.ubuntu-software" name="/etc/PackageKit/Vendor.conf" pid=1483 comm="snap-store" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+Oct 10 14:49:22 sBaboyan kernel: [ 3738.122870] 10:49:22.059178 timesync vgsvcTimeSyncWorker: Radical host time change: 2 518 857 000 000ns (HostNow=1 633 862 962 059 000 000 ns HostLast=1 633 860 443 202 000 000 ns)
+Oct 10 14:49:32 sBaboyan kernel: [ 3748.120751] 10:49:32.059836 timesync vgsvcTimeSyncWorker: Radical guest time change: 2 515 029 791 000ns (GuestNow=1 633 862 972 059 819 000 ns GuestLast=1 633 860 457 030 028 000 ns fSetTimeLastLoop=true )
+Oct 10 15:02:28 sBaboyan kernel: [ 4524.080761] usb 1-1: USB disconnect, device number 2
+Oct 10 15:02:28 sBaboyan kernel: [ 4524.568486] usb 1-1: new full-speed USB device number 3 using ohci-pci
+Oct 10 15:02:28 sBaboyan kernel: [ 4524.944837] usb 1-1: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
+Oct 10 15:02:28 sBaboyan kernel: [ 4524.944850] usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+Oct 10 15:02:28 sBaboyan kernel: [ 4524.944855] usb 1-1: Product: USB Tablet
+Oct 10 15:02:28 sBaboyan kernel: [ 4524.944859] usb 1-1: Manufacturer: VirtualBox
+Oct 10 15:02:29 sBaboyan kernel: [ 4524.965806] input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:80EE:0021.0002/input/input8
+Oct 10 15:02:29 sBaboyan kernel: [ 4525.024151] hid-generic 0003:80EE:0021.0002: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0

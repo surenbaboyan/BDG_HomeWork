@@ -1,0 +1,32 @@
+10.0.2.15 - - [10/Oct/2021:17:21:32 +0400] "GET / HTTP/1.1" 200 3477 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:21:32 +0400] "GET /icons/ubuntu-logo.png HTTP/1.1" 200 3623 "http://10.0.2.15/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:21:32 +0400] "GET /favicon.ico HTTP/1.1" 404 487 "http://10.0.2.15/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:21:40 +0400] "GET / HTTP/1.1" 200 3477 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:21:41 +0400] "GET /icons/ubuntu-logo.png HTTP/1.1" 304 180 "http://10.0.2.15/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:21:41 +0400] "GET / HTTP/1.1" 200 3476 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:21:41 +0400] "GET / HTTP/1.1" 200 3476 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:21:41 +0400] "GET /icons/ubuntu-logo.png HTTP/1.1" 304 180 "http://10.0.2.15/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:21:42 +0400] "GET / HTTP/1.1" 200 3476 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:21:42 +0400] "GET / HTTP/1.1" 200 3476 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:21:42 +0400] "GET /icons/ubuntu-logo.png HTTP/1.1" 304 180 "http://10.0.2.15/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:22:52 +0400] "GET / HTTP/1.1" 200 3477 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:22:52 +0400] "GET / HTTP/1.1" 200 3476 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:22:52 +0400] "GET /icons/ubuntu-logo.png HTTP/1.1" 304 180 "http://10.0.2.15/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:22:53 +0400] "GET / HTTP/1.1" 200 3476 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:22:54 +0400] "GET /icons/ubuntu-logo.png HTTP/1.1" 304 180 "http://10.0.2.15/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:22:54 +0400] "GET / HTTP/1.1" 200 3476 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:22:54 +0400] "GET / HTTP/1.1" 200 3476 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:22:54 +0400] "GET /icons/ubuntu-logo.png HTTP/1.1" 304 180 "http://10.0.2.15/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:26:52 +0400] "GET / HTTP/1.1" 200 3477 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+10.0.2.15 - - [10/Oct/2021:17:26:52 +0400] "GET /icons/ubuntu-logo.png HTTP/1.1" 304 180 "http://10.0.2.15/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0"
+[Sun Oct 10 16:41:25.107099 2021] [mpm_event:notice] [pid 6001:tid 139737607310400] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Sun Oct 10 16:41:25.107271 2021] [core:notice] [pid 6001:tid 139737607310400] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Oct 10 17:30:29.220418 2021] [mpm_event:notice] [pid 6001:tid 139737607310400] AH00491: caught SIGTERM, shutting down
+[Sun Oct 10 17:30:35.959672 2021] [mpm_event:notice] [pid 8019:tid 140678527114304] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Sun Oct 10 17:30:35.959798 2021] [core:notice] [pid 8019:tid 140678527114304] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Oct 10 17:31:30.234351 2021] [mpm_event:notice] [pid 8019:tid 140678527114304] AH00491: caught SIGTERM, shutting down
+[Sun Oct 10 17:31:46.867265 2021] [mpm_event:notice] [pid 8107:tid 140349978659904] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Sun Oct 10 17:31:46.867439 2021] [core:notice] [pid 8107:tid 140349978659904] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Oct 10 17:32:10.707931 2021] [mpm_event:notice] [pid 8107:tid 140349978659904] AH00491: caught SIGTERM, shutting down
+[Sun Oct 10 17:32:29.199064 2021] [mpm_event:notice] [pid 686:tid 140157191420992] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Sun Oct 10 17:32:29.199639 2021] [core:notice] [pid 686:tid 140157191420992] AH00094: Command line: '/usr/sbin/apache2'

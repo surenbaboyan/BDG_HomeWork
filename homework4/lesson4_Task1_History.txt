@@ -1,0 +1,20 @@
+ 1073  ls /home/aram
+ 1074  sudo groupadd -g 1500 researcher
+ 1075  sudo usermod -g researcher aram
+ 1076  id aram
+ 1077  sudo usermod -a -G sudo aram
+ 1078  id aram
+ 1079  sudo passwd aram
+ 1080  cat /etc/passwd
+ 1081  userdel -r aram
+ 1082  ls /home
+ 1083  sudo userdel -r aram
+ 1084  ls /home
+ 1085  history
+ 1086  history | tail n -20 >lesson4_Task1_History.txt
+ 1087  history | tail n- 20 >lesson4_Task1_History.txt
+ 1088  history | tail -n 20 >lesson4_Task1_History.txt
+ 1089  history | tail -n 20 >/home/lesson4lesson4_Task1_History.txt
+ 1090  history | tail -n 20 >/home/lesson4/lesson4_Task1_History.txt
+ 1091  history | tail -n 20 > /home/lesson4/lesson4_Task1_History.txt
+ 1092  history | tail -n 20 > /home/suren/lesson4/lesson4_Task1_History.txt

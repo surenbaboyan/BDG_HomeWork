@@ -1,0 +1,17 @@
+  838  sudo apt install nginx
+  839  systemctl status nginx
+  840  cd /etc
+  841  ls
+  842  cd /nginx
+  843  cd nginx
+  844  ls
+  845  cd site enable
+  846  cd site-enabled
+  847  cd sites-enabled
+  848  ls
+  849  sudo nano default
+  850  systemctl status apach2
+  851  systemctl status apache2
+  852  systemctl start apache2
+  853  history > /home/suren/Desktop/nginxInstall_History
+  854  history | tail -n 17 > /home/suren/Desktop/nginxInstall_History

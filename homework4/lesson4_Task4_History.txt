@@ -1,0 +1,13 @@
+ 1371  cp /etc/passwd /etc/group /tmp
+ 1372  sudo useradd jane
+ 1373  sudo usermod -c 'Name Name' jane
+ 1374  sudo usermod -a -G sudo
+ 1375  sudo usermod -a -G sudo jane
+ 1376  id jane
+ 1377  diff /etc/passwd /etc/group
+ 1378  sudo userdel jane sudo
+ 1379  sudo gpasswd -d jane sudo
+ 1380  id jane
+ 1381  diff /etc/passwd /etc/group
+ 1382  history
+ 1383  history | tail -n 13 > /home/suren/lesson4/lesson4_Task4_History.txt

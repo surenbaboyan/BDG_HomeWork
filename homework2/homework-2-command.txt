@@ -1,0 +1,112 @@
+  468  mkdir tmp
+  469  cd tmp
+  470  touch file1
+  471  touch file2
+  472  touch file3
+  473  ls -l
+  474  c
+  475  cd
+  476  alias tmp="ls /home/suren/tmp"
+  477  tmp
+  478  unalias tmp
+  479  tmp
+  480  echo "The appartment cost \$100000"
+  481  echo "Hello World"
+  482  cost=5000
+  483  echo $cost
+  484  clear
+  485  echo "The appartment cost \$100000"
+  486  echo "Hello World"
+  487  cost=5000
+  488  echo $cost
+  489  cal 2028
+  490  cal 2028 > calendar-2028.txt
+  491  cat calendar_2028.txt
+  492  cat calendar-2028.txt
+  493  date
+  494  date --date="2 years ago"
+  495  last -f
+  496  last -F
+  497  cat calendar-2028.txt
+  498  touch test.sh
+  499  ls -l | grep test.sh
+  500  chmod u+x,gu-rw,o-r test.sh
+  501  ls -l | grep test.sh
+  502  chmod u+rwx,g-rw,o-r test.sh
+  503  ls -l | grep test.sh
+  504  chmod u-r,g-rw,o-r test.sh
+  505  ls -l | grep test.sh
+  506  chmod u+r,g-rw,o-r test.sh
+  507  ls -l | grep test.sh
+  508  chmod u=rwx,o+rwx test.sh
+  509  ls -l | grep test.sh
+  510  chmod u-x test.sh
+  511  ls -l | grep test.sh
+  512  chmod u=rx test.sh
+  513  ls -l | grep test.sh
+  514  chmod u-x,o-r test.sh
+  515  ls -l | grep test.sh
+  516  chmod u+w,g+rw,o-wx test.sh
+  517  ls -l | grep test.sh
+  518  chmod u+x,g=,o+wx test.sh
+  519  ls -l | grep test.sh
+  520  chmod u=r,g+r,o+r test.sh
+  521  ls -l | grep test.sh
+  522  chmod u+rwx,o=r test.sh
+  523  ls -l | grep test.sh
+  524  chmod 700 test.sh
+  525  ls -l | grep test.sh
+  526  chmod 707 test.sh
+  527  ls -l | grep test.sh
+  528  chmod 607 test.sh
+  529  ls -l | grep test.sh
+  530  chmod 507 test.sh
+  531  ls -l | grep test.sh
+  532  chmod 403 test.sh
+  533  ls -l | grep test.sh
+  534  chmod 660 test.sh
+  535  ls -l | grep test.sh
+  536  chmod 703 test.sh
+  537  ls -l | grep test.sh
+  538  chmod 447 test.sh
+  539  ls -l | grep test.sh
+  540  chmod 744 test.sh
+  541  ls -l | grep test.sh
+  542  clear
+  546  colour="red"
+  547  echo $colour 
+  548  colour="blue"
+  549  echo $colour 
+  550  env
+  551  env >env.txt
+  552  export $colour
+  553  env
+  554  export colour="blue"
+  555  env
+  556  env >env-new.txt
+  557  diff env.txt env-new.txt
+  558  env -u colour
+  559  diff env.txt env-new.txt
+  560  clear
+  583  touch first-file
+  584  ls
+  585  cp first-file tmp
+  586  cd tmp
+  587  ls
+  588  cd
+  589  mkdir first-directory
+  590  ls
+  591  mv first-file first-directory/
+  592  ls
+  593  cd first-directory/
+  594  ls
+  595  cd
+  596  mv first-directory/ tmp
+  597  ls
+  598  cd tmp
+  599  ls
+  600  rm first-file 
+  601  ls
+  602  rm -r first-directory 
+  603  ls
+  604  history >/home/suren/Desktop/homework-2-command.txt

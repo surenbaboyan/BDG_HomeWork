@@ -1,0 +1,52 @@
+ 1135  sudo apt update && sudo apt install wget -y
+ 1136  sudo useradd --system --no-create-home --shell /usr/sbin/nologin prometheus
+ 1137  cd /home/suren/downloads
+ 1138  cd /home/suren/Downloads
+ 1139  wget https://github.com/prometheus/prometheus/releases/download/v2.30.3/prometheus-2.30.3.linux-amd64.tar.gz
+ 1140  tar xvzf prometheus-2.30.3.linux-amd64.tar.gz
+ 1141  ls -l
+ 1142  sudo mv -v prometheus-2.28.0.linux-amd64 /opt/prometheus
+ 1143  sudo mv -v prometheus-2.30.3.linux-amd64 /opt/prometheus
+ 1144  sudo chown -Rfv root:root /opt/prometheus
+ 1145  sudo chmod -Rfv 0755 /opt/prometheus
+ 1146  sudo nano /opt/prometheus/prometheus.yml
+ 1147  egrep -v '(^[ ]*#)|(^$)' /opt/prometheus/prometheus.yml | sudo tee /opt/prometheus/prometheus.yml
+ 1148  sudo mkdir -v /opt/prometheus/data
+ 1149  sudo chown -Rfv prometheus:prometheus /opt/prometheus/data
+ 1150  sudo nano /etc/systemd/system/prometheus.service
+ 1151  sudo systemctl daemon-reload
+ 1152  sudo systemctl start prometheus.service
+ 1153  sudo systemctl enable prometheus.service
+ 1154  sudo systemctl status prometheus.service
+ 1155  hostname -I
+ 1156  wget https://github.com/prometheus/node_exporter/releases/download/v*/node_exporter-*.*-amd64.tar.gz
+ 1157  $ wget https://github.com/prometheus/node_exporter/releases/download/v*/node_exporter-*.linux-amd64.tar.gz
+ 1158  wget https://github.com/prometheus/node_exporter/releases/download/v*/node_exporter-*.linux-amd64.tar.gz
+ 1159  wget https://github.com/prometheus/node_exporter/releases/download/v1.2.2/node_exporter-1.2.2.linux-amd64.tar.gz
+ 1160  tar xzf node_exporter-1.1.2.linux-amd64.tar.gz
+ 1161  tar xzf node_exporter-1.2.2.linux-amd64.tar.gz
+ 1162  sudo mv -v node_exporter-1.2.2.linux-amd64/node_exporter /usr/local/bin/
+ 1163  sudo chown root:root /usr/local/bin/node_exporter
+ 1164  node_exporter --version
+ 1165  sudo nano /etc/systemd/system/node-exporter.service
+ 1166  sudo systemctl daemon-reload
+ 1167  sudo systemctl start node-exporter.service
+ 1168  sudo systemctl enable node-exporter.service
+ 1169  sudo systemctl status node-exporter.service
+ 1170  sudo nano /opt/prometheus/prometheus.yml
+ 1171  sudo systemctl restart prometheus.service
+ 1172  sudo apt update
+ 1241  sudo apt install -y apt-transport-https
+ 1242  sudo apt install -y software-properties-common wget
+ 1243  wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+ 1244  echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+ 1245  sudo apt install grafana
+ 1246  sudo ls /usr/lib/systemd/system/grafana-server.service
+ 1247  cat /usr/lib/systemd/system/grafana-server.service
+ 1248  sudo systemctl start grafana-server
+ 1249  sudo systemctl status grafana-server
+ 1250  histoy
+ 1251  history
+ 1252  history | tail -n 116 > /home/suren/Desktop/homework-3-command.txt
+ 1253  history | tail -n 118 > /home/suren/Desktop/homework-3-command.txt
+ 1254  history | tail -n 120 > /home/suren/Desktop/homework-3-command.txt

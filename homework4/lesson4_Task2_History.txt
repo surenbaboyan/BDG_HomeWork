@@ -1,0 +1,30 @@
+ 1529  touch test-file-assignment
+ 1530  mkdir test-directory-assignment
+ 1531  ll test-file-assignment >output-file
+ 1532  cat /home/suren/output-file
+ 1533  ll test-directory-assignment >output-directory
+ 1534  cat /home/suren/output-directory
+ 1535  useradd test
+ 1536  sudo useradd test
+ 1537  sudo groupadd researcher
+ 1538  sudo usermod -a -G researcher test
+ 1539  id test
+ 1540  chown test /home/suren/test-file-assignment
+ 1541  sudo chown test /home/suren/test-file-assignment
+ 1542  sudo chgrp -R researcher /home/suren/test-directory-assignment/
+ 1543  sudo chmod 107 /home/suren/test-file-assignment 
+ 1544  sudo chmod 700 /home/suren/test-directory-assignment/
+ 1545  ll test-file-assignment >>output-file >>output-file
+ 1546  cat /home/suren/output-file
+ 1547  ll test-directory-assignment >>output-directory >>output-directory
+ 1548  cat /home/suren/output-directory
+ 1549  userdel test
+ 1550  sudo userdel test
+ 1551  sudo groupdel researcher
+ 1552  ll test-directory-assignment >>output-directory >>output-directory
+ 1553  ll test-file-assignment >>output-file >>output-file
+ 1554  cat /home/suren/output-file
+ 1555* 
+ 1556  history
+ 1557  history | tail -n 29 /home/suren/lesson4/lesson4_Task2History.txt
+ 1558  history | tail -n 30 >/home/suren/lesson4/lesson4_Task2History.txt
