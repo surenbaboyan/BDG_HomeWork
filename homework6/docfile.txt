@@ -1,0 +1,32 @@
+1.clone repository from my github link https://github.com/surenbaboyan/BDG_HomeWork.git
+
+2.First Install Prometheus.
+
+2.1.Update the System
+ cmd: sudo apt update
+
+2.2.Copy prometheus installer to your ubuntu home/tmp directory
+ cmd: cp prometheus-2.30.3.linux-amd64.tar.gz /home/YOUR_USER_NAME/tmp
+
+2.3.Navigate to the tmp directory
+ cmd:cd /home/YOUR_USER_NAME/tmp
+
+2.4.Extract the prometheus-2.30.3.linux-amd64.tar.gz archive file
+ cmd: tar xvzf prometheus-2.30.3.linux-amd64.tar.gz
+
+2.5.Change directory to the extracted archive
+ cmd:cd prometheus-2.30.0.linux-amd64
+
+2.6.Create the configuration file directory.
+ cmd:sudo mkdir /etc/prometheus
+
+2.7.Create the data directory.
+ cmd:sudo mkdir /var/lib/prometheus
+
+2.8.Move the files prometheus and promtool to /usr/local/bin/
+ cmd:sudo mv prometheus promtool /usr/local/bin/
+
+2.9.Move console files in console directory and library files in console_libraries directory to /etc/prometheus/ directory
+ cmd:sudo mv consoles/ console_libraries/ /etc/prometheus/
+2.10.Move the configuration file prometheus.yml to /etc/prometheus/ directory
+ cmd:sudo mv prometheus.yml /etc/prometheus/prometheus.yml
