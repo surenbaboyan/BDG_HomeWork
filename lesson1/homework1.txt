@@ -1,9 +1,0 @@
-suren@sBaboyan:~$ history
-    1  sudo apt install build-essential dkms linux-headers-$(uname -r)
-    2  who
-    3  pwd
-    4  last
-    5  ls
-    6  touch Hello
-    7  ls
-    8  history
