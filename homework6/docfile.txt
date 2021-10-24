@@ -5,7 +5,7 @@
 2.1.Update the System
  cmd: sudo apt update
 
-2.2.Copy prometheus installer to your ubuntu home/tmp directory
+2.2.Copy prometheus installer(see my git repository homework6 folder) to your ubuntu tmp directory
  cmd: cp prometheus-2.30.3.linux-amd64.tar.gz /home/YOUR_USER_NAME/tmp
 
 2.3.Navigate to the tmp directory
@@ -58,10 +58,44 @@
 
 [Install]
   WantedBy=multi-user.target
-2.15 Start the Prometheus service
+2.15 Start the Prometheus service and enable
  cmd:sudo systemctl start prometheus
  cmd:sudo systemctl enable prometheus
-2.16 Check the status of the Prometheus service
+2.16 Check the status of the Prometheus service is enabled and running
  cmd:sudo systemctl status prometheus
 2.17 Access the Prometheus:on browser at port 9090
 http://localhost:9090
+
+3 Install Node Exporter to your system
+3.1 Copy node-exporter installer (see my git repository homework6 folder) to your ubuntu user tmp directory
+ cmd: cp node_exporter-1.2.2.linux-amd64.tar.gz /home/YOUR_USER_NAME/tmp
+3.2.Extract the node_exporter-1.2.2.linux-amd64.tar.gz archive
+ cmd:tar xzf node_exporter-1.2.2.linux-amd64.tar.gz
+3.3.Move the node_exporter binary file from the node_exporter-1.2.2.linux-amd64/ directory to the /usr/local/bin/ directory
+ cmd:sudo mv -v node_exporter-1.1.2.linux-amd64/node_exporter /usr/local/bin/
+3.4 change user and group for this file
+ cmd:sudo chown root:root /usr/local/bin/node_exporter
+3.5 create node-exporter.service
+ cmd:sudo nano /etc/systemd/system/node-exporter.service
+ and add this lines then save
+ [Unit]
+   Description=Prometheus exporter for machine metrics
+
+ [Service]
+  Restart=always
+  User=prometheus
+  ExecStart=/usr/local/bin/node_exporter
+  ExecReload=/bin/kill -HUP $MAINPID
+  TimeoutStopSec=20s
+  SendSIGKILL=no
+
+ [Install]
+  WantedBy=multi-user.target
+3.6 cmd:sudo systemctl daemon-reload
+3.7 start the node-exporter service and enable
+ cmd:sudo systemctl start node-exporter.service
+ cmd:sudo systemctl enable node-exporter.service
+3.8 check the status is enabled and runnig
+ cmd:sudo systemctl status node-exporter.service
+3.9 check Node Exporter is working url: http://localhost:9100/metrics
+4. Adding Node Exporter to Prometheus
