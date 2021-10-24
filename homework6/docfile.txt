@@ -99,3 +99,21 @@ http://localhost:9090
  cmd:sudo systemctl status node-exporter.service
 3.9 check Node Exporter is working url: http://localhost:9100/metrics
 4. Adding Node Exporter to Prometheus
+4.1 you can copy prometheus.yml config file from my repo homework5 directory and replace your prometheus.yml file
+4.2 restart Prometheus service
+ cmd:sudo systemctl restart prometheus.service
+4.3 now visit http://localhost:9090/targets and you should see entry node_exporter.
+
+5 Install Grafana. the installer .deb file you can see my git repository homework6 folder
+ cmd: sudo dpkg -i grafana_8.2.2_amd64.deb
+5.1 Start Grafana service.
+ cmd:sudo systemctl enable --now grafana-server
+5.2 check the status grafana server
+ cmd:sudo systemctl status grafana-server.service
+5.3 access from web http://localhost:3000 default pass admin/admin
+
+6. configure grafana.
+6.1 login the grafana server.
+6.2 Navigate to the datasours and add prometheus URL link (localhost:9090)
+6.3 import node exporter dashboard (you can use id 1860)
+6.4 done!
