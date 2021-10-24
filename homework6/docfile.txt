@@ -30,3 +30,38 @@
  cmd:sudo mv consoles/ console_libraries/ /etc/prometheus/
 2.10.Move the configuration file prometheus.yml to /etc/prometheus/ directory
  cmd:sudo mv prometheus.yml /etc/prometheus/prometheus.yml
+2.11.Create a prometheus group
+ cmd:sudo groupadd --system prometheus
+2.12.Create a user prometheus and assign it to the prometheus group
+ cmd:sudo useradd -s /sbin/nologin --system -g prometheus prometheus
+2.13.Set the ownership
+ cmd:sudo chown -R prometheus:prometheus /etc/prometheus/  /var/lib/prometheus/
+ cmd:sudo chmod -R 775 /etc/prometheus/ /var/lib/prometheus/
+2.14.Create service file for Prometheus to start
+ cmd:sudo nano /etc/systemd/system/prometheus.service
+[Unit]
+  Description=Prometheus
+  Wants=network-online.target
+  After=network-online.target
+
+[Service]
+  User=prometheus
+  Group=prometheus
+  Restart=always
+  Type=simple
+  ExecStart=/usr/local/bin/prometheus \
+    --config.file=/etc/prometheus/prometheus.yml \
+    --storage.tsdb.path=/var/lib/prometheus/ \
+    --web.console.templates=/etc/prometheus/consoles \
+    --web.console.libraries=/etc/prometheus/console_libraries \
+    --web.listen-address=0.0.0.0:9090
+
+[Install]
+  WantedBy=multi-user.target
+2.15 Start the Prometheus service
+ cmd:sudo systemctl start prometheus
+ cmd:sudo systemctl enable prometheus
+2.16 Check the status of the Prometheus service
+ cmd:sudo systemctl status prometheus
+2.17 Access the Prometheus:on browser at port 9090
+http://localhost:9090
