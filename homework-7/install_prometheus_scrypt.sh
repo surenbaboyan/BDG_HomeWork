@@ -1,5 +1,5 @@
 sudo apt update
-mkdir /home/$USER/tmp
+mkdir /home/$USER/temp
 cp prometheus-2.30.3.linux-amd64.tar.gz /home/$USER/tmp
 sudo cp prometheus.service /etc/systemd/system/
 tar /home/$USER/tmp xvf prometheus-2.30.3.linux-amd64.tar.gz
