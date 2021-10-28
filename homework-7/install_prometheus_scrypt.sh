@@ -1,17 +1,17 @@
-apt update
-cp prometheus-2.30.3.linux-amd64.tar.gz /home/YOUR_USER_NAME/tmp
-cp prometheus.service /etc/systemd/system/
-cd /home/$USER/tmp
-tar xvzf prometheus-2.30.3.linux-amd64.tar.gz
-cd prometheus-2.30.0.linux-amd64
+sudo apt update
+mkdir /home/$USER/tmp
+cp prometheus-2.30.3.linux-amd64.tar.gz /home/$USER/tmp
+sudo cp prometheus.service /etc/systemd/system/
+tar /home/$USER/tmp xvf prometheus-2.30.3.linux-amd64.tar.gz
 mkdir /etc/prometheus
 mkdir /var/lib/prometheus
-mv prometheus promtool /usr/local/bin/
-mv consoles/ console_libraries/ /etc/prometheus/
-mv prometheus.yml /etc/prometheus/prometheus.yml
-groupadd --system prometheus
-useradd -s /sbin/nologin --system -g prometheus prometheus
-chown -R prometheus:prometheus /etc/prometheus/  /var/lib/prometheus/
-chmod -R 775 /etc/prometheus/ /var/lib/prometheus/
-systemctl start prometheus
-systemctl enable prometheus
+mv /home/$USER/tmp/prometheus-2.30.3.linux-amd64/prometheus /home/$USER/tmp/prometheus-2.30.3.linux-amd64/promtool /usr/local/bin/
+mv /home/$USER/tmp/prometheus-2.30.3.linux-amd64/consoles/ /home/$USER/tmp/prometheus-2.30.3.linux-amd64/console_libraries/ /etc/prometheus/
+mv /home/$USER/tmp/prometheus-2.30.3.linux-amd64/prometheus.yml /etc/prometheus/prometheus.yml
+sudo groupadd --system prometheus
+sudo useradd -s /sbin/nologin --system -g prometheus prometheus
+sudo chown -R prometheus:prometheus /etc/prometheus/  /var/lib/prometheus/
+sudo chmod -R 775 /etc/prometheus/ /var/lib/prometheus/
+sudo systemctl daemon-reload
+sudo systemctl start prometheus
+sudo systemctl enable prometheus
