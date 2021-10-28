@@ -2,7 +2,7 @@ sudo apt update
 mkdir /home/$USER/temp
 cp prometheus-2.30.3.linux-amd64.tar.gz /home/$USER/temp
 sudo cp prometheus.service /etc/systemd/system/
-tar xvf /home/$USER/temp/prometheus-2.30.3.linux-amd64.tar.gz
+tar xvf prometheus-2.30.3.linux-amd64.tar.gz -C /home/sb/temp
 mkdir /etc/prometheus
 mkdir /var/lib/prometheus
 mv /home/$USER/temp/prometheus-2.30.3.linux-amd64/prometheus /home/$USER/temp/prometheus-2.30.3.linux-amd64/promtool /usr/local/bin/
