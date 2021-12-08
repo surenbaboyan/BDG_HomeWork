@@ -1,0 +1,38 @@
+- hosts: 'ec2'
+  tasks:
+    - name: 'update apt packages'
+      apt:
+       update_cache: 'yes'
+       force_apt_get: 'yes'
+      become: true
+
+    - name: 'Get current OS release version into a variable'
+      shell: lsb_release -cs
+      register: OS_RELEASE_VERSION
+
+    - name: "Install docker from a package"
+      apt:
+       deb: https://download.docker.com/linux/{{ OS_VERSION }}/dists/{{ OS_RELEASE_VERSION.stdout }}/pool/stable/amd64/docker-ce_{{ DOCKER_CE_VERSION }}~ubuntu-focal_amd64.deb
+      become: true
+
+    - name: "Add docker group"
+      group:
+       name: "docker"
+       state: present
+
+    - name: "Adding user to docker group"
+      user:
+        name: "{{ USER_NAME }}"
+        groups: "docker"
+        append: "yes"
+        
+    - name: "Install python dependencies"
+      apt:
+       update_cache: yes
+       state: latest
+       name: python3-pip
+      become: true
+
+    - name: "Install Docker sdk for python"
+      pip:
+       name: docker

@@ -1,0 +1,12 @@
+USER_NAME: ubuntu
+OS_VERSION: ubuntu
+#DOCKER_CONTAINERD_VERSION: 1.4.12-1
+#DOCKER_CE_CLI_VERSION: 20.10.11~3-0
+DOCKER_CE_VERSION: 20.10.10~3-0
+DOCKER_PACKAGES:
+#- apt-transport-https
+#- software-properties-common
+- ca-certificates
+- curl
+- gnupg
+- lsb-release

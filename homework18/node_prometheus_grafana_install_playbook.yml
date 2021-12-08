@@ -1,0 +1,22 @@
+- hosts: 'ec2'
+  tasks:
+    - name: "Install node-exporter"
+      docker_container:
+        name: node-exporter
+        image: prom/node-exporter
+        state: started
+        ports: "9100:9100"
+
+    - name: "Install prometheus"
+      docker_container:
+        name: prometheus
+        image: prom/prometheus
+        state: started
+        ports: "9090:9090"
+    
+    - name: "Install Grafana"
+      docker_container:
+        name: grafana
+        image: grafana/grafana
+        state: started
+        ports: "3000:3000"
