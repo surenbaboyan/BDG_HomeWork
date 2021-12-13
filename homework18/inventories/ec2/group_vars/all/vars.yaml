@@ -1,12 +1,21 @@
 USER_NAME: ubuntu
 OS_VERSION: ubuntu
-#DOCKER_CONTAINERD_VERSION: 1.4.12-1
-#DOCKER_CE_CLI_VERSION: 20.10.11~3-0
+OS_ARCHITECTURE: amd64
+DOCKER_CONTAINERD_VERSION: 1.4.12-1
+DOCKER_CE_CLI_VERSION: 20.10.11~3-0
 DOCKER_CE_VERSION: 20.10.10~3-0
 DOCKER_PACKAGES:
-#- apt-transport-https
-#- software-properties-common
-- ca-certificates
-- curl
-- gnupg
-- lsb-release
+ - ca-certificates
+ - curl
+ - gnupg
+ - lsb-release
+MY_SQL_VERSION: 5.7
+ZABBIX_NETWORK_NAME: zabbix_net
+MYSQL_DATABASE: zabbixDB
+MYSQL_USER: zabbixUSER
+MYSQL_PASSWORD: zabbixPWD
+MYSQL_ROOT_PASSWORD: root_pwd
+CONTAINER_NAME_MY_SQL: mysql-zabbix
+CONTAINER_NAME_ZABBIX_SERVER: zabbix-server-mysql
+CONTAINER_NAME_ZABBIX_WEB_SERVER: zabbix-web-nginx-mysql
+CONTAINER_NAME_ZABBIX_AGENT: zabbix-agent

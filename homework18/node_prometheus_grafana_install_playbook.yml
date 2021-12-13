@@ -1,22 +1,42 @@
 - hosts: 'ec2'
   tasks:
-    - name: "Install node-exporter"
+    - name: Create directory for prometheus file
+      file: 
+       path: /home/{{ USER_NAME }}/prometheus
+       state: directory
+
+    - name: Copy prometheus config file
+      copy:
+        src: ~/BDGHomeWorks/homework18/inventories/ec2/Prometheus/prometheus.yml
+        dest: /home/{{ USER_NAME }}/prometheus/prometheus.yml
+
+    - name: Install node-exporter
       docker_container:
         name: node-exporter
         image: prom/node-exporter
-        state: started
-        ports: "9100:9100"
+        state:  started
+        ports: 9100:9100
 
-    - name: "Install prometheus"
+    - name: Install prometheus
       docker_container:
         name: prometheus
         image: prom/prometheus
         state: started
-        ports: "9090:9090"
+        ports: 9090:9090
+        volumes: /home/{{ USER_NAME }}/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     
-    - name: "Install Grafana"
+    - name: Install Grafana
       docker_container:
         name: grafana
         image: grafana/grafana
         state: started
-        ports: "3000:3000"
+        ports: 3000:3000
+    
+    - name: Create network
+      docker_network:
+        name: monitoring_net
+        connected:
+           - node-exporter
+           - prometheus
+           - grafana
+        appends: yes

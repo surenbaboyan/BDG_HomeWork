@@ -12,8 +12,13 @@
 
     - name: "Install docker from a package"
       apt:
-       deb: https://download.docker.com/linux/{{ OS_VERSION }}/dists/{{ OS_RELEASE_VERSION.stdout }}/pool/stable/amd64/docker-ce_{{ DOCKER_CE_VERSION }}~ubuntu-focal_amd64.deb
+       deb: https://download.docker.com/linux/{{ OS_VERSION }}/dists/{{ OS_RELEASE_VERSION.stdout }}/pool/stable/{{ OS_ARCHITECTURE }}/{{ item }}
       become: true
+      loop:
+      - containerd.io_{{ DOCKER_CONTAINERD_VERSION }}_{{ OS_ARCHITECTURE }}.deb
+      - docker-ce-cli_{{ DOCKER_CE_CLI_VERSION }}~{{ OS_VERSION }}-{{ OS_RELEASE_VERSION.stdout }}_{{ OS_ARCHITECTURE }}.deb
+      - docker-ce_{{ DOCKER_CE_VERSION }}~{{ OS_VERSION }}-{{ OS_RELEASE_VERSION.stdout }}_{{ OS_ARCHITECTURE }}.deb
+       
 
     - name: "Add docker group"
       group:
@@ -25,6 +30,7 @@
         name: "{{ USER_NAME }}"
         groups: "docker"
         append: "yes"
+      become: true
         
     - name: "Install python dependencies"
       apt:
