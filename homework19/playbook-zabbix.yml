@@ -1,0 +1,5 @@
+- name: Install zabbix
+  hosts: ec2
+  roles:
+    - role: common_settings
+    - zabbix

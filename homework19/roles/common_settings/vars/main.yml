@@ -1,0 +1,5 @@
+USER_NAME: ubuntu
+NETWORK_NAME: monitoring_net
+CONTAINER_NAME_NODE: node-exporter
+CONTAINER_NAME_CADVISOR: cadvisor
+CONTAINER_NAME_PROMETHEUS: prometheus

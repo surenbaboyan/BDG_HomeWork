@@ -1,0 +1,43 @@
+---
+# tasks file for roles/docker-installer
+- name: update apt packages
+  apt:
+   update_cache: 'yes'
+   force_apt_get: 'yes'
+  become: true
+
+- name: 'Get current OS release version into a variable'
+  shell: lsb_release -cs
+  register: OS_RELEASE_VERSION
+
+- name: "Install docker from a package"
+  apt:
+   deb: https://download.docker.com/linux/{{ OS_VERSION }}/dists/{{ OS_RELEASE_VERSION.stdout }}/pool/stable/{{ OS_ARCHITECTURE }}/{{ item }}
+  become: true
+  loop:
+    - containerd.io_{{ DOCKER_CONTAINERD_VERSION }}_{{ OS_ARCHITECTURE }}.deb
+    - docker-ce-cli_{{ DOCKER_CE_CLI_VERSION }}~{{ OS_VERSION }}-{{ OS_RELEASE_VERSION.stdout }}_{{ OS_ARCHITECTURE }}.deb
+    - docker-ce_{{ DOCKER_CE_VERSION }}~{{ OS_VERSION }}-{{ OS_RELEASE_VERSION.stdout }}_{{ OS_ARCHITECTURE }}.deb
+  
+- name: "Add docker group"
+  group:
+   name: "docker"
+   state: present
+
+- name: "Adding user to docker group"
+  user:
+   name: "{{ USER_NAME }}"
+   groups: "docker"
+   append: "yes"
+  become: true
+        
+- name: "Install python dependencies"
+  apt:
+   update_cache: yes
+   state: latest
+   name: python3-pip
+  become: true
+
+- name: "Install Docker sdk for python"
+  pip:
+   name: docker

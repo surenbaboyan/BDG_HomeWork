@@ -1,0 +1,18 @@
+---
+# tasks file for roles/prometheus
+
+- name: Copy Prometheus cfg file
+  template:
+    src: prometheus.yml.j2
+    dest: /home/{{ USER_NAME }}/prometheus.yml
+
+- name: Deploy prometheus
+  docker_container:
+    name: '{{ CONTAINER_NAME_PROMETHEUS }}'
+    image: prom/prometheus:{{ TAG }}
+    state: '{{ STATE }}'
+    ports: '{{ PORT }}:9090'
+    volumes: /home/{{ USER_NAME }}/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+     - name: '{{ NETWORK_NAME }}'
+    

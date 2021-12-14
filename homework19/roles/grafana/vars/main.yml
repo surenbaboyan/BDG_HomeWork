@@ -1,0 +1,9 @@
+---
+# vars file for roles/grafana
+CONTAINER_NAME_GRAFANA: grafana
+TAG: latest
+STATE: started
+ADMIN_PASSWORD: Admin
+SIGN_UP_STATE: 'true'
+DATASOURCE_NAME: Prometheus
+DATASOURCE_TYPE: prometheus

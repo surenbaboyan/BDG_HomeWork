@@ -1,0 +1,30 @@
+---
+# tasks file for roles/grafana
+- name: Create directory for grafana config file
+  file: 
+    path: /home/{{ USER_NAME }}/grafanaCfg
+    state: directory
+
+- name: Copy grafana cfg directories/files
+  copy:
+    src: files/
+    dest: /home/{{ USER_NAME }}/grafanaCfg
+
+- name: Copy grafana cfg template file
+  template:
+    src: datasource.yml.j2
+    dest: /home/{{ USER_NAME }}/grafanaCfg/datasources/datasource.yml
+
+- name: Deploy grafana
+  docker_container:
+    name: '{{ CONTAINER_NAME_GRAFANA }}'
+    image: grafana/grafana:{{ TAG }}
+    state: '{{ STATE }}'
+    ports: '{{ PORT }}:3000'
+    user: 472
+    env:
+      GF_SECURITY_ADMIN_PASSWORD: '{{ ADMIN_PASSWORD }}'
+      GF_USERS_ALLOW_SIGN_UP: '{{ SIGN_UP_STATE }}'
+    volumes: /home/{{ USER_NAME }}/grafanaCfg/:/etc/grafana/provisioning/
+    networks:
+     - name: '{{ NETWORK_NAME }}'

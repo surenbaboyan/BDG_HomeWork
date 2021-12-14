@@ -1,0 +1,66 @@
+---
+# tasks file for roles/zabbix
+- name: Create network
+  docker_network:
+   name: '{{ ZABBIX_NETWORK_NAME }}'
+   appends: yes
+
+- name: Deploy mysql db for zabbix
+  docker_container:
+    image: mysql:{{ MY_SQL_VERSION }}
+    name: '{{ CONTAINER_NAME_MY_SQL }}'
+    state: '{{ STATE }}'
+    env:
+     MYSQL_DATABASE: '{{ MYSQL_DATABASE }}'
+     MYSQL_USER: '{{ MYSQL_USER }}'
+     MYSQL_PASSWORD: '{{ MYSQL_PASSWORD }}'
+     MYSQL_ROOT_PASSWORD: '{{ MYSQL_ROOT_PASSWORD }}'
+    networks:
+     - name: '{{ ZABBIX_NETWORK_NAME }}'
+    command: "--character-set-server=utf8 --collation-server=utf8_bin"
+
+- name:  Deploy zabbix server
+  docker_container:
+    image: zabbix/zabbix-server-mysql:latest
+    name: '{{ CONTAINER_NAME_ZABBIX_SERVER }}'
+    state: '{{ STATE }}'
+    env:
+     DB_SERVER_HOST: '{{ CONTAINER_NAME_MY_SQL }}'
+     MYSQL_DATABASE: '{{ MYSQL_DATABASE }}'
+     MYSQL_USER: '{{ MYSQL_USER }}'
+     MYSQL_PASSWORD: '{{ MYSQL_PASSWORD }}'
+     MYSQL_ROOT_PASSWORD: '{{ MYSQL_ROOT_PASSWORD }}'
+     ports: '{{ SERVER_PORT }}:10051'
+    networks:
+     - name: '{{ ZABBIX_NETWORK_NAME }}'
+       links: 
+        - '{{ CONTAINER_NAME_MY_SQL }}:mysql'
+
+- name:  Deploy zabbix web server
+  docker_container:
+    image: zabbix/zabbix-web-nginx-mysql:latest
+    name: '{{ CONTAINER_NAME_ZABBIX_WEB_SERVER }}'
+    state: '{{ STATE }}'
+    env:
+     DB_SERVER_HOST: '{{ CONTAINER_NAME_MY_SQL }}'
+     MYSQL_DATABASE: '{{ MYSQL_DATABASE }}'
+     MYSQL_USER: '{{ MYSQL_USER }}'
+     MYSQL_PASSWORD: '{{ MYSQL_PASSWORD }}'
+     MYSQL_ROOT_PASSWORD: '{{ MYSQL_ROOT_PASSWORD }}'
+    ports: '{{ WEB_PORT }}:8080'
+    networks:
+     - name: '{{ ZABBIX_NETWORK_NAME }}'
+       links: 
+        - '{{ CONTAINER_NAME_MY_SQL }}:mysql'
+        - '{{ CONTAINER_NAME_ZABBIX_SERVER }}:zabbix-server'
+
+- name:  Deploy zabbix agent
+  docker_container:
+   image: zabbix/zabbix-agent:latest
+   name: '{{ CONTAINER_NAME_ZABBIX_AGENT }}'
+   state: '{{ STATE }}'  
+   ports: '{{ AGENT_PORT }}:10050'
+   env:
+    ZBX_SERVER_HOST: '{{ CONTAINER_NAME_ZABBIX_SERVER }}'
+   networks:
+    - name: '{{ ZABBIX_NETWORK_NAME }}'

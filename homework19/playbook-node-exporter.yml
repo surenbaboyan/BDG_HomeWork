@@ -1,0 +1,5 @@
+- name: Install node-exporter
+  hosts: ec2
+  roles:
+    - role: common_settings
+    - node-exporter
