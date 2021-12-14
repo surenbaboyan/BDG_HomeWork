@@ -1,0 +1,16 @@
+---
+# tasks file for roles/cadvisor
+- name: Deploy cadvisor
+  docker_container:
+    name: '{{ CONTAINER_NAME_CADVISOR }}'
+    image: gcr.io/cadvisor/cadvisor:{{ TAG }}
+    state: '{{ STATE }}'
+    ports: '{{ PORT }}:8080'
+    volumes:
+     - /:/rootfs:ro
+     - /var/run:/var/run:ro
+     - /sys:/sys:ro
+     - /var/lib/docker/:/var/lib/docker:ro
+     - /dev/disk/:/dev/disk:ro
+    networks:
+     - name: '{{ NETWORK_NAME }}'

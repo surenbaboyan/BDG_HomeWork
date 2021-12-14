@@ -1,0 +1,13 @@
+---
+# vars file for roles/zabbix
+STATE: started
+ZABBIX_NETWORK_NAME: zabbix_net
+MY_SQL_VERSION: 5.7
+MYSQL_DATABASE: zabbixDB
+MYSQL_USER: zabbixUSER
+MYSQL_PASSWORD: zabbixPWD
+MYSQL_ROOT_PASSWORD: root_pwd
+CONTAINER_NAME_MY_SQL: mysql-zabbix
+CONTAINER_NAME_ZABBIX_SERVER: zabbix-server
+CONTAINER_NAME_ZABBIX_WEB_SERVER: zabbix-web
+CONTAINER_NAME_ZABBIX_AGENT: zabbix-agent

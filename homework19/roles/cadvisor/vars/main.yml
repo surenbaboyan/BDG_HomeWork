@@ -1,0 +1,4 @@
+---
+# vars file for roles/cadvisor
+TAG: v0.43.0
+STATE: started

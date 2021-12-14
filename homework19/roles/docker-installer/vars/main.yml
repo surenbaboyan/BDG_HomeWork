@@ -1,0 +1,7 @@
+---
+# vars file for roles/docker-installer
+OS_VERSION: ubuntu
+OS_ARCHITECTURE: amd64
+DOCKER_CONTAINERD_VERSION: 1.4.12-1
+DOCKER_CE_CLI_VERSION: 20.10.11~3-0
+DOCKER_CE_VERSION: 20.10.10~3-0

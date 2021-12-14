@@ -1,0 +1,14 @@
+---
+# tasks file for roles/node-exporter
+- name: Create network
+  docker_network:
+    name: '{{ NETWORK_NAME }}'
+
+- name: Deploy node-exporter
+  docker_container:
+    name: '{{ CONTAINER_NAME_NODE }}'
+    image: prom/node-exporter:{{ TAG }}
+    state: '{{ STATE }}'
+    ports: '{{ PORT }}:9100'
+    networks:
+     - name: '{{ NETWORK_NAME }}'

@@ -1,0 +1,11 @@
+  apiVersion: 1
+  datasources:
+  - access: proxy
+    editable: true
+    isDefault: true
+    jsonData:
+      timeInterval: 5s
+    name: '{{ DATASOURCE_NAME }}'
+    orgId: 1
+    type: '{{DATASOURCE_TYPE}}'
+    url: http://{{ CONTAINER_NAME_PROMETHEUS }}:9090

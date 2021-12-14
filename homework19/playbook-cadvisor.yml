@@ -1,0 +1,5 @@
+- name: Install cadviser
+  hosts: ec2
+  roles:
+    - role: common_settings
+    - cadvisor
