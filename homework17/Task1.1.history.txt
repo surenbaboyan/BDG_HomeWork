@@ -1,0 +1,9 @@
+ansible ec2 -m shell -a "docker network create mon_net"
+ansible ec2 -m shell -a "docker run -d --name node-exporter -p 9100:9100 prom/node-exporter"
+ansible ec2 -m shell -a "docker ps"
+ansible ec2 -m shell -a "mkdir prometheus"
+ansible ec2 -m copy -a "src=~/BDGHomeWorks/homework17/prometheus.yml dest=/home/ubuntu/prometheus/prometheus.yml" -b
+ansible ec2 -m shell -a "docker run -d --name prometheus -v /home/ubuntu/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml -p 9090:9090 prom/prometheus"
+ansible ec2 -m shell -a "docker network connect mon_net node-exporter"
+ansible ec2 -m shell -a "docker network connect mon_net prometheus"
+ansible ec2 -m shell -a "docker run -d --network mon_net --name grafana -p 3000:3000 grafana/grafana"
