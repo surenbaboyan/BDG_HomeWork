@@ -1,0 +1,11 @@
+- name: Testing 
+  hosts: localhost
+  tasks:
+  - include_vars: ./config/password.yml
+  - debug:
+       msg: "Grafana Password: {{  grafana.password }}"
+  - debug:
+       msg: "Password1: {{ password2 }}"
+  - template:
+       src: ./config-J2/password.yml.j2
+       dest: ./file/password.yml

@@ -1,0 +1,3 @@
+---
+# defaults file for roles/grafana
+PORT: 3000
