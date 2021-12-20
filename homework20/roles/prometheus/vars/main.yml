@@ -1,0 +1,5 @@
+---
+# vars file for roles/prometheus
+TAG: latest
+CONTAINER_NAME_PROMETHEUS: prometheus
+STATE: started

@@ -1,0 +1,14 @@
+---
+# tasks file for roles/grafana
+- name: Deploy grafana
+  docker_container:
+    name: '{{ CONTAINER_NAME_GRAFANA }}'
+    image: grafana/grafana:{{ TAG }}
+    state: '{{ STATE }}'
+    ports: '{{ PORT }}:3000'
+    user: 472
+    env:
+      GF_SECURITY_ADMIN_PASSWORD: '{{ ADMIN_PASSWORD }}'
+  
+- debug:
+    msg: "Grafana Passwprd: {{ ADMIN_PASSWORD }}"

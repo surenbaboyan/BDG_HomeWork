@@ -1,0 +1,4 @@
+- name: Install prometheus
+  hosts: ec2
+  roles:
+    - prometheus

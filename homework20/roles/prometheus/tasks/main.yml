@@ -1,0 +1,10 @@
+---
+# tasks file for roles/prometheus
+
+- name: Deploy prometheus
+  docker_container:
+    name: '{{ CONTAINER_NAME_PROMETHEUS }}'
+    image: prom/prometheus:{{ TAG }}
+    state: '{{ STATE }}'
+    ports: '{{ PORT }}:9090'
+    
