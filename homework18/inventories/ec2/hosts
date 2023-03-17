@@ -1,0 +1,5 @@
+[ec2]
+# 3.69.254.197 ansible_user=ubuntu
+# 3.122.177.74 ansible_user=ubuntu
+# 18.184.168.150 ansible_user=ubuntu
+3.67.87.148 ansible_user=ubuntu
